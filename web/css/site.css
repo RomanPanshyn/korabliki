@@ -129,12 +129,19 @@ body {
 }
 
 .btn-send {
-    width: 100%;
+    width: 200px;
     height: 45px;
     font-size: 18px;
     background-color: #d40064;
     font-weight: 600;
     letter-spacing: 1px;
+    margin-left: 691px;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    display: block;
+    cursor: pointer;
 }
 
 .ship-title {
@@ -206,32 +213,27 @@ body {
 }
 
 .more-photo {
-    width: 300px;
-    height: 70px;
-    left: 680px;
-    background-color: #ffffff;
-    position: absolute;
-    margin-top: 1440px;
-    z-index: 5;
-}
-
-#idbtn-more-photo {
     width: 200px;
     height: 45px;
-    right: 0px;
+    right: 35%;
     font-size: 18px;
     padding-top: 10px;
     background-color: #d40064;
+    color: white;
+    text-align: center;
     font-weight: 600;
     letter-spacing: 1px;
     position: absolute;
-    z-index: 6;
+    display: block;
+    margin-top: 1440px;
+    cursor: pointer;
+    z-index: 7;
 }
 
 #gallery-bg {
     width: 1050px;
     height: 3500px;
-    margin-left: 400px;
+    margin-left: -35px;
     overflow: hidden;
     opacity: 0.7;
     background-color: #000000;
@@ -244,7 +246,7 @@ body {
     width: 923px;
     height: 770px;
     overflow: hidden;
-    margin-left: 440px;
+    margin-left: 5px;
     margin-top: 760px;
     opacity: 1;
     background-color: #ffffff;
@@ -253,11 +255,11 @@ body {
     z-index: 11;
 }
 
-.close-icon {
+.gallery-close-icon {
     width: 17px;
     height: 17px;
     margin-top: 760px;
-    margin-left: 1380px;
+    margin-left: 945px;
     background-size: 100%;
     background-image: url('../images/closeicon.png');
     background-repeat: no-repeat;
@@ -271,9 +273,9 @@ body {
     width: 883px;
     height: 589px;
     margin-top: 780px;
-    margin-left: 460px;
+    margin-left: 25px;
     background-size: 100%;
-    background-image: url('../images/gallery/_MG_4386.jpg');
+    background-image: url('../images/gallery/medium/_MG_4386.jpg');
     background-repeat: no-repeat;
     opacity: 1;
     display: none;
@@ -281,6 +283,3159 @@ body {
     overflow: hidden;
     z-index: 12;
 }
+
+.gallery-previous {
+    width: 24px;
+    height: 38px;
+    margin-top: 1426px;
+    margin-left: 25px;
+    background-size: 100%;
+    background-image: url('../images/galleryprevious.png');
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 15;
+}
+
+.gallery-next {
+    width: 24px;
+    height: 38px;
+    margin-top: 1426px;
+    margin-left: 885px;
+    background-size: 100%;
+    background-image: url('../images/gallerynext.png');
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 15;
+}
+
+
+.gallery-icon-27 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5757px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4331.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-27-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5757px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-27-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-27-bg:hover + .gallery-icon-27-magnifier {
+    display: block;
+}
+
+.gallery-icon-27-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -5689px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-26 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5549px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4336.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-26-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5549px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-26-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-26-bg:hover + .gallery-icon-26-magnifier {
+    display: block;
+}
+
+.gallery-icon-26-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -5481px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-25 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5341px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4337.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-25-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5341px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-25-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-25-bg:hover + .gallery-icon-25-magnifier {
+    display: block;
+}
+
+.gallery-icon-25-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -5273px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-24 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5133px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4338.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-24-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -5133px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-24-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-24-bg:hover + .gallery-icon-24-magnifier {
+    display: block;
+}
+
+.gallery-icon-24-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -5065px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-23 {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4925px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4341.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-23-bg {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4925px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-23-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-23-bg:hover + .gallery-icon-23-magnifier {
+    display: block;
+}
+
+.gallery-icon-23-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -4857px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-22 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4718px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4348.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-22-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4718px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-22-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-22-bg:hover + .gallery-icon-22-magnifier {
+    display: block;
+}
+
+.gallery-icon-22-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -4650px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-21 {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4510px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4351.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-21-bg {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4510px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-21-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-21-bg:hover + .gallery-icon-21-magnifier {
+    display: block;
+}
+
+.gallery-icon-21-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -4442px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-20 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4303px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4354.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-20-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4303px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-20-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-20-bg:hover + .gallery-icon-20-magnifier {
+    display: block;
+}
+
+.gallery-icon-20-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -4235px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-19 {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4095px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4364.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-19-bg {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -4095px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-19-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-19-bg:hover + .gallery-icon-19-magnifier {
+    display: block;
+}
+
+.gallery-icon-19-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -4027px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-18 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3888px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4371.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-18-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3888px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-18-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-18-bg:hover + .gallery-icon-18-magnifier {
+    display: block;
+}
+
+.gallery-icon-18-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -3820px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-17 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3680px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4372.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-17-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3680px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-17-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-17-bg:hover + .gallery-icon-17-magnifier {
+    display: block;
+}
+
+.gallery-icon-17-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -3612px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-16 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3472px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4373.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-16-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3472px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-16-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-16-bg:hover + .gallery-icon-16-magnifier {
+    display: block;
+}
+
+.gallery-icon-16-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -3404px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-15 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3264px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4374.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-15-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3264px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-15-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-15-bg:hover + .gallery-icon-15-magnifier {
+    display: block;
+}
+
+.gallery-icon-15-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -3196px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-14 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3056px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4383.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-14-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -3056px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-14-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-14-bg:hover + .gallery-icon-14-magnifier {
+    display: block;
+}
+
+.gallery-icon-14-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -2988px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-13 {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2848px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4384.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-13-bg {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2848px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-13-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-13-bg:hover + .gallery-icon-13-magnifier {
+    display: block;
+}
+
+.gallery-icon-13-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -2780px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-12 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2641px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4386.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-12-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2641px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-12-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-12-bg:hover + .gallery-icon-12-magnifier {
+    display: block;
+}
+
+.gallery-icon-12-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -2573px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-11 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2433px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4387.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-11-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2433px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-11-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-11-bg:hover + .gallery-icon-11-magnifier {
+    display: block;
+}
+
+.gallery-icon-11-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -2365px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-10 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2225px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4389.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-10-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2225px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-10-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-10-bg:hover + .gallery-icon-10-magnifier {
+    display: block;
+}
+
+.gallery-icon-10-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -2157px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-9 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2017px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4390.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-9-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -2017px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-9-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-9-bg:hover + .gallery-icon-9-magnifier {
+    display: block;
+}
+
+.gallery-icon-9-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -1949px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-8 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1809px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4392.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-8-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1809px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-8-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-8-bg:hover + .gallery-icon-8-magnifier {
+    display: block;
+}
+
+.gallery-icon-8-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -1741px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-7 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1601px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4393.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-7-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1601px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-7-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-7-bg:hover + .gallery-icon-7-magnifier {
+    display: block;
+}
+
+.gallery-icon-7-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -1533px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-6 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1393px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4398.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-6-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1393px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-6-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-6-bg:hover + .gallery-icon-6-magnifier {
+    display: block;
+}
+
+.gallery-icon-6-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -1325px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-5 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1185px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4404.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-5-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -1185px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-5-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-5-bg:hover + .gallery-icon-5-magnifier {
+    display: block;
+}
+
+.gallery-icon-5-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -1117px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-4 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -977px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4407.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-4-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -977px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-4-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-4-bg:hover + .gallery-icon-4-magnifier {
+    display: block;
+}
+
+.gallery-icon-4-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -909px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-3 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -769px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4410.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-3-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -769px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-3-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-3-bg:hover + .gallery-icon-3-magnifier {
+    display: block;
+}
+
+.gallery-icon-3-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -701px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon-2 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -561px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4414.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-2-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -561px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-2-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-2-bg:hover + .gallery-icon-2-magnifier {
+    display: block;
+}
+
+.gallery-icon-2-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -493px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+
+.gallery-icon-1 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -353px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4418.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon-1-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -353px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon-1-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon-1-bg:hover + .gallery-icon-1-magnifier {
+    display: block;
+}
+
+.gallery-icon-1-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -285px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+
+.gallery-icon0 {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -145px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4423.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon0-bg {
+    width: 193px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: -145px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon0-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon0-bg:hover + .gallery-icon0-magnifier {
+    display: block;
+}
+
+.gallery-icon0-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: -77px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon1 {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 62px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4590.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon1-bg {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 62px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon1-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon1-bg:hover + .gallery-icon1-magnifier {
+    display: block;
+}
+
+.gallery-icon1-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 80px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon2 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 162px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4559.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon2-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 162px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon2-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon2-bg:hover + .gallery-icon2-magnifier {
+    display: block;
+}
+
+.gallery-icon2-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 230px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon3 {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 370px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4591.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon3-bg {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 370px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon3-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon3-bg:hover + .gallery-icon3-magnifier {
+    display: block;
+}
+
+.gallery-icon3-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 388px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon4 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 470px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4553.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon4-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 470px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon4-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon4-bg:hover + .gallery-icon4-magnifier {
+    display: block;
+}
+
+.gallery-icon4-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 538px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon5 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 679px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4397.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon5-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 679px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon5-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon5-bg:hover + .gallery-icon5-magnifier {
+    display: block;
+}
+
+.gallery-icon5-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 747px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+
+.gallery-icon6 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 887px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4427.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon6-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 887px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon6-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon6-bg:hover + .gallery-icon6-magnifier {
+    display: block;
+}
+
+.gallery-icon6-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 955px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon7 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1095px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4430.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon7-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1095px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon7-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon7-bg:hover + .gallery-icon7-magnifier {
+    display: block;
+}
+
+.gallery-icon7-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 1163px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon8 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1303px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4434.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon8-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1303px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon8-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon8-bg:hover + .gallery-icon8-magnifier {
+    display: block;
+}
+
+.gallery-icon8-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 1371px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon9 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1511px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4436.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon9-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1511px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon9-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon9-bg:hover + .gallery-icon9-magnifier {
+    display: block;
+}
+
+.gallery-icon9-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 1579px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon10 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1719px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4437.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon10-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1719px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon10-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon10-bg:hover + .gallery-icon10-magnifier {
+    display: block;
+}
+
+.gallery-icon10-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 1787px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon11 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1927px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4441.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon11-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 1927px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon11-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon11-bg:hover + .gallery-icon11-magnifier {
+    display: block;
+}
+
+.gallery-icon11-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 1995px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon12 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2135px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4442.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon12-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2135px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon12-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon12-bg:hover + .gallery-icon12-magnifier {
+    display: block;
+}
+
+.gallery-icon12-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 2203px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon13 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2343px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4453.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon13-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2343px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon13-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon13-bg:hover + .gallery-icon13-magnifier {
+    display: block;
+}
+
+.gallery-icon13-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 2411px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon14 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2551px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4454.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon14-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2551px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon14-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon14-bg:hover + .gallery-icon14-magnifier {
+    display: block;
+}
+
+.gallery-icon14-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 2619px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon15 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2759px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4462.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon15-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2759px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon15-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon15-bg:hover + .gallery-icon15-magnifier {
+    display: block;
+}
+
+.gallery-icon15-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 2827px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon16 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2967px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4467.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon16-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 2967px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon16-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon16-bg:hover + .gallery-icon16-magnifier {
+    display: block;
+}
+
+.gallery-icon16-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 3035px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon17 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3175px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4468.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon17-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3175px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon17-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon17-bg:hover + .gallery-icon17-magnifier {
+    display: block;
+}
+
+.gallery-icon17-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 3243px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon18 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3383px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4470.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon18-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3383px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon18-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon18-bg:hover + .gallery-icon18-magnifier {
+    display: block;
+}
+
+.gallery-icon18-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 3451px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon19 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3591px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4483.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon19-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3591px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon19-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon19-bg:hover + .gallery-icon19-magnifier {
+    display: block;
+}
+
+.gallery-icon19-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 3659px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon20 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3799px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4495.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon20-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 3799px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon20-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon20-bg:hover + .gallery-icon20-magnifier {
+    display: block;
+}
+
+.gallery-icon20-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 3867px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon21 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4007px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4509.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon21-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4007px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon21-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon21-bg:hover + .gallery-icon21-magnifier {
+    display: block;
+}
+
+.gallery-icon21-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 4075px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon22 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4215px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4556.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon22-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4215px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon22-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon22-bg:hover + .gallery-icon22-magnifier {
+    display: block;
+}
+
+.gallery-icon22-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 4283px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon23 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4423px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4557.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon23-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4423px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon23-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon23-bg:hover + .gallery-icon23-magnifier {
+    display: block;
+}
+
+.gallery-icon23-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 4491px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon24 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4631px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4565.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon24-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4631px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon24-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon24-bg:hover + .gallery-icon24-magnifier {
+    display: block;
+}
+
+.gallery-icon24-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 4699px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon25 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4839px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4566.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon25-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 4839px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon25-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon25-bg:hover + .gallery-icon25-magnifier {
+    display: block;
+}
+
+.gallery-icon25-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 4907px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon26 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5047px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4567.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon26-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5047px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon26-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon26-bg:hover + .gallery-icon26-magnifier {
+    display: block;
+}
+
+.gallery-icon26-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 5115px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon27 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5255px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4572.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon27-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5255px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon27-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon27-bg:hover + .gallery-icon27-magnifier {
+    display: block;
+}
+
+.gallery-icon27-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 5323px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon28 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5463px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4588.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon28-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5463px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon28-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon28-bg:hover + .gallery-icon28-magnifier {
+    display: block;
+}
+
+.gallery-icon28-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 5531px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon29 {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5671px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4589.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon29-bg {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5671px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon29-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon29-bg:hover + .gallery-icon29-magnifier {
+    display: block;
+}
+
+.gallery-icon29-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 5689px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon30 {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5771px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4592.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon30-bg {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5771px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon30-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon30-bg:hover + .gallery-icon30-magnifier {
+    display: block;
+}
+
+.gallery-icon30-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 5789px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon31 {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5871px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4593.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon31-bg {
+    width: 86px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5871px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon31-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon31-bg:hover + .gallery-icon31-magnifier {
+    display: block;
+}
+
+.gallery-icon31-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 5889px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
+.gallery-icon32 {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5971px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4594.jpg');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-icon32-bg {
+    width: 194px;
+    height: 129px;
+    margin-top: 1383px;
+    margin-left: 5971px;
+    background-size: 100%;
+    background-color: transparent;
+    opacity: 0.6;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 13;
+}
+
+.layout-container .gallery-icon32-bg:hover {
+    background-color: #000000;
+}
+
+.layout-container .gallery-icon32-bg:hover + .gallery-icon32-magnifier {
+    display: block;
+}
+
+.gallery-icon32-magnifier {
+    width: 57px;
+    height: 57px;
+    margin-top: 1420px;
+    margin-left: 6039px;
+    background-size: 100%;
+    background-image: url('../images/magnifier.png');
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 14;
+}
+
 
 .organize {
     width: 980px;
@@ -1061,11 +4216,17 @@ body {
 .btn-contact-send {
     width: 200px;
     height: 45px;
-    margin-left: 10px;
+    margin-left: 660px;
     font-size: 18px;
     background-color: #d40064;
     font-weight: 600;
+    padding-top: 10px;
     letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    display: block;
+    cursor: pointer;
 }
 
 .site-index {
