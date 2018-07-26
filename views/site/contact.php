@@ -6,63 +6,46 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yii\captcha\Captcha;
 
+$this->context->layout = 'contact';
 $this->title = 'Контакты';
-$this->params['breadcrumbs'][] = 'Контакты';
 ?>
 <div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
-
-        <div class="alert alert-success">
-            Спасибо, что связались с нами. Мы ответим Вам как можно скорее.
+    <br><br>
+    <div class="contact-info">
+        <?= Html::img('@web/images/locationiconred.png', ['alt' => 'location',
+            'style' => ['width' => '22px', 'margin-bottom' => '10px']]) ?>
+        МЕСТО СТОЯНКИ <span class="contact-bold">ЯХТ-КЛУБ "ФРЕГАТ"</span>
+    </div>
+    <div class="contact-info">
+        <?= Html::img('@web/images/phoneiconred.png', ['alt' => 'phone',
+            'style' => ['width' => '22px']]) ?>
+        +38 <span class="contact-bold">(063) 495 06 22</span>
+    </div>
+    <br><br>
+    <div class="contact-text">Оставьте заявку и мы вам перезвоним:</div>
+    <div class="contact-form-new">
+        <?php $form = ActiveForm::begin(); ?>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <?= $form->field($model, 'name')
+                ->textInput(['placeholder'=>'Имя', 'class' => 'form-contact'])
+                ->label(false) ?>
         </div>
-
-        <p>
-            Note that if you turn on the Yii debugger, you should be able
-            to view the mail message on the mail panel of the debugger.
-            <?php if (Yii::$app->mailer->useFileTransport): ?>
-                Because the application is in development mode, the email is not sent but saved as
-                a file under <code><?= Yii::getAlias(Yii::$app->mailer->fileTransportPath) ?></code>.
-                Please configure the <code>useFileTransport</code> property of the <code>mail</code>
-                application component to be false to enable email sending.
-            <?php endif; ?>
-        </p>
-
-    <?php else: ?>
-
-        <p>
-            Если у Вас есть бизнес предложения или другие вопросы, пожалуйста, заполните следующую
-            форму для связи с нами. Спасибо.
-        </p>
-
-        <div class="row">
-            <div class="col-lg-5">
-
-                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
-                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-
-                    <?= $form->field($model, 'email') ?>
-
-                    <?= $form->field($model, 'subject') ?>
-
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
-
-                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                    ]) ?>
-
-                    <div class="form-group">
-                        <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                    </div>
-
-                <?php ActiveForm::end(); ?>
-
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <?= $form->field($model, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
+                'mask' => '+38 (999) 999-99-99'])
+                ->textInput(['placeholder'=>'Телефон', 'class' => 'form-contact']) ?>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <?= $form->field($model, 'email')->label(false)
+                ->textInput(['placeholder'=>'E-mail', 'class' => 'form-contact']) ?>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="form-group">
+                <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn-contact-send-new', 'name' => 'contact-button']) ?>
             </div>
         </div>
-
-    <?php endif; ?>
+        <?php ActiveForm::end(); ?>
+    </div>
+    <div id="map"></div>
 </div>

@@ -11,6 +11,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Book;
 use app\models\Contact;
+use app\models\Comments;
 
 class SiteController extends Controller
 {
@@ -64,10 +65,10 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $modelBook = new Book();
-        $modelContact = new Contact();
+        $model = new Contact();
         return $this->render('index', [
             'modelBook' => $modelBook,
-            'modelContact' => $modelContact,
+            'model' => $model,
         ]);
     }
 
@@ -90,12 +91,12 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
+        $model = new Contact();
+        // if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+        //     Yii::$app->session->setFlash('contactFormSubmitted');
+        //
+        //     return $this->refresh();
+        // }
         return $this->render('contact', [
             'model' => $model,
         ]);
@@ -109,5 +110,13 @@ class SiteController extends Controller
     public function actionBlog()
     {
         return $this->render('blog');
+    }
+
+    public function actionArticle()
+    {
+        $model = new Comments();
+        return $this->render('article', [
+            'model' => $model,
+        ]);
     }
 }

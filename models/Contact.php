@@ -10,6 +10,7 @@ use Yii;
  * @property int $id
  * @property string $name
  * @property string $phone
+ * @property string $email
  */
 class Contact extends \yii\db\ActiveRecord
 {
@@ -27,7 +28,8 @@ class Contact extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone'], 'required'],
+            [['name', 'phone', 'email'], 'required'],
+            [['email'], 'string', 'max' => 70],
             [['name', 'phone'], 'string', 'max' => 100],
         ];
     }
@@ -41,6 +43,7 @@ class Contact extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Имя',
             'phone' => 'Телефон',
+            'email' => 'E-mail',
         ];
     }
 }

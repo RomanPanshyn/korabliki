@@ -87,8 +87,10 @@ $this->title = 'ПАНСЬКА ВТІХА';
                 <div class="col-lg-1 col-md-1 col-sm-1 label-date application-form">
 
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 application-form btn-send">
-                    ОТПРАВИТЬ                    
+                <div class="col-lg-3 col-md-3 col-sm-3 application-form">
+                    <div class="form-group">
+                        <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn-send', 'name' => 'send-button']) ?>
+                    </div>
                 </div>
             </div>
 
@@ -242,16 +244,17 @@ $this->title = 'ПАНСЬКА ВТІХА';
             <div class="contact-form">
                 <?php $form = ActiveForm::begin(); ?>
                 <div class="col-lg-4 col-md-4 col-sm-4 application-form">
-                    <?= $form->field($modelContact, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
+                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
                     ->label(false) ?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 application-form">
-                    <?= $form->field($modelContact, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
+                    <?= $form->field($model, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
                         'mask' => '+38 (999) 999-99-99'])
                         ->textInput(['placeholder'=>'+38 (___) ___-__-__', 'class' => 'application-form-input']) ?>
                 </div>
-                <div class="btn-contact-send">ОТПРАВИТЬ</div>
-
+                <div class="col-lg-3 col-md-3 col-sm-3 application-form form-group">
+                    <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn-contact-send', 'name' => 'contact-button']) ?>
+                </div>
                 <?php ActiveForm::end(); ?>
             </div>
         </div>
