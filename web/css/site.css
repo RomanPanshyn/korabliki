@@ -150,6 +150,29 @@ body {
     margin-bottom: 20px;
 }
 
+.contact-name {
+    position: absolute;
+    display: block;
+}
+
+.contact-phone {
+    margin-left: 260px;
+    position: absolute;
+    display: block;
+}
+
+.contact-email {
+    margin-left: 520px;
+    position: absolute;
+    display: block;
+}
+
+.contact-send {
+    margin-left: 780px;
+    position: absolute;
+    display: block;
+}
+
 .application {
     width: 980px;
     height: 410px;
@@ -200,7 +223,8 @@ body {
 
 .form-contact {
     font-size: 20px;
-    height: 45px;
+    width: 250px;
+    height: 55px;
     color: black;
 }
 
@@ -4299,11 +4323,9 @@ body {
 }
 
 .contact-form-new {
-    width: 100%;
+    width: 980px;
     height: 100px;
-    /* margin-top: 70px;
-    margin-left: 30px;
-    margin-right: 30px; */
+    margin-left: -15px;
     position: absolute;
 }
 
@@ -4321,7 +4343,7 @@ body {
 }
 
 .btn-contact-send-new {
-    height: 45px;
+    height: 55px;
     width: 200px;
     font-size: 18px;
     background-color: #d40064;
@@ -4750,7 +4772,6 @@ body {
     width: 980px;
     position: absolute;
     margin-top: 120px;
-    z-index: 20;
 }
 
 .add-comment-caption {

@@ -26,21 +26,21 @@ $this->title = 'Контакты';
     <div class="contact-text">Оставьте заявку и мы вам перезвоним:</div>
     <div class="contact-form-new">
         <?php $form = ActiveForm::begin(); ?>
-        <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 contact-name">
             <?= $form->field($model, 'name')
                 ->textInput(['placeholder'=>'Имя', 'class' => 'form-contact'])
                 ->label(false) ?>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 contact-phone">
             <?= $form->field($model, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
                 'mask' => '+38 (999) 999-99-99'])
                 ->textInput(['placeholder'=>'Телефон', 'class' => 'form-contact']) ?>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 contact-email">
             <?= $form->field($model, 'email')->label(false)
                 ->textInput(['placeholder'=>'E-mail', 'class' => 'form-contact']) ?>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-3">
+        <div class="col-lg-3 col-md-3 col-sm-3 contact-send">
             <div class="form-group">
                 <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn-contact-send-new', 'name' => 'contact-button']) ?>
             </div>

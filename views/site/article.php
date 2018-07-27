@@ -95,18 +95,18 @@ $this->title = 'Статья';
         <div class="new-comment">
             <div class="add-comment-caption">Добавить комментарий</div>
             <?php $form = ActiveForm::begin(); ?>
-                <span class="comment-name">
+                <div class="comment-name">
                     <?= $form->field($model, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'input-comment'])
                     ->label(false) ?>
-                </span>
-                <span class="comment-email">
+                </div>
+                <div class="comment-email">
                     <?= $form->field($model, 'email')->label(false)
                         ->textInput(['placeholder'=>'E-mail', 'class' => 'input-comment']) ?>
-                </span>
-                <span class="comment-details">
+                </div>
+                <div class="comment-details">
                     <?= $form->field($model, 'comment')->label(false)
                         ->textarea(['placeholder'=>'Комментарий', 'rows' => '4', 'class' => 'input-details-comment']) ?>
-                </span>                
+                </div>                
                 <div class="form-group">
                     <?= Html::submitButton('ОСТАВИТЬ КОММЕНТАРИЙ', ['class' => 'send-comment', 'name' => 'comment-button']) ?>
                 </div>
