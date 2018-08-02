@@ -7,15 +7,10 @@ use yii\bootstrap\ActiveForm;
 
 $this->context->layout = 'article';
 $this->title = 'Статья';
+$this->params['breadcrumbs'][] = ['label' => 'Блог', 'url' => ['blog']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-article">
-    <div class="blog-space"></div>
-    <div class="avatar-bg"></div>
-    <div class="avatar"></div>
-    <div class="user">
-        <div class="user-icon"></div>
-        <div class="user-name">JON SANNY</div>
-    </div>
     <div class="article-datetime">17:00 21.07.2018</div>
     <div class="article-caption">
         СЛЕДУЕТ, ОДНАКО ЗАБЫВАТЬ, ЧТО НОВАЯ МОДЕЛЬ
@@ -43,77 +38,5 @@ $this->title = 'Статья';
         </div>
         <br>
         Не следует, однако забывать, что реализация намеченных плановых заданий требуют определения и уточнения форм развития.
-    </div>
-    <div class="article-record-hashtag">#эксперимент &nbsp; #прогрессивно &nbsp; #задания</div>
-    <div class="arcicle-social">
-        <div class="like-number">2935</div>
-        <div class="like"></div>
-        <div class="dislike-number">12</div>
-        <div class="dislike"></div>
-        <div class="comments-number">65</div>
-        <div class="comments"></div>
-    </div>
-    <div class="article-hr"></div>
-    <div class="comments-box">
-        <div class="comment1">
-            <div class="comment-avatar-bg"></div>
-            <div class="comment-user">
-                <div class="comment-user-icon"></div>
-                <div class="comment-user-name">Kenon</div>
-            </div>
-            <div class="comment-datetime">17:00 11.06.2018</div>
-            <div class="comment-text">
-                Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности позволяет выполнять
-                важные задания по разработке систем массового участия
-            </div>
-        </div>
-        <div class="comment-space"></div>
-        <div class="comment2">
-            <div class="comment-avatar-bg"></div>
-            <div class="comment-user">
-                <div class="comment-user-icon"></div>
-                <div class="comment-user-name">Kim</div>
-            </div>
-            <div class="comment-datetime">17:00 21.08.2018</div>
-            <div class="comment-text">
-                Что дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке систем
-                массового участия
-            </div>
-        </div>
-        <div class="comment-space"></div>
-        <div class="comment3">
-            <div class="comment-avatar-bg"></div>
-            <div class="comment-user">
-                <div class="comment-user-icon"></div>
-                <div class="comment-user-name">Oki_Doki</div>
-            </div>
-            <div class="comment-datetime">17:00 21.09.2018</div>
-            <div class="comment-text">
-                систем массового участия
-            </div>
-        </div>
-        <div class="new-comment">
-            <div class="add-comment-caption">Добавить комментарий</div>
-            <?php $form = ActiveForm::begin(); ?>
-                <div class="comment-name">
-                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'input-comment'])
-                    ->label(false) ?>
-                </div>
-                <div class="comment-email">
-                    <?= $form->field($model, 'email')->label(false)
-                        ->textInput(['placeholder'=>'E-mail', 'class' => 'input-comment']) ?>
-                </div>
-                <div class="comment-details">
-                    <?= $form->field($model, 'comment')->label(false)
-                        ->textarea(['placeholder'=>'Комментарий', 'rows' => '4', 'class' => 'input-details-comment']) ?>
-                </div>                
-                <div class="form-group">
-                    <?= Html::submitButton('ОСТАВИТЬ КОММЕНТАРИЙ', ['class' => 'send-comment', 'name' => 'comment-button']) ?>
-                </div>
-            <?php ActiveForm::end(); ?>
-        </div>
-    </div>
-    <div class="article-pagination">1 &nbsp; 2 &nbsp; 3 &nbsp; <span class="blog-page">4</span> &nbsp;
-        5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9... 12...16
     </div>
 </div>

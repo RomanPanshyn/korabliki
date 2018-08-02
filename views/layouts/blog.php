@@ -42,6 +42,16 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-right navigation-links', 'style' => [
             'margin-top' => '20px']],
             'items' => [
+                ['label' => 'ЗАКАЗАТЬ',
+                    // 'url' => ['/site/index'], 
+                    'options' => ['style' => [
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => '|', 'options' => ['style' => [
+                    'margin-left' => '-10px',
+                    'margin-right' => '-10px',
+                    'font-size' => '19px',
+                    ]]],
                 ['label' => 'БЛОГ', 'url' => ['/site/blog'], 'options' => ['style' => [
                     'font-size' => '19px',
                     ]]],

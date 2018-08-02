@@ -12,6 +12,8 @@ use app\models\ContactForm;
 use app\models\Book;
 use app\models\Contact;
 use app\models\Comments;
+use app\models\Blog;
+use app\models\BlogSearch;
 
 class SiteController extends Controller
 {
@@ -72,6 +74,16 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionIndexmobile()
+    {
+        $modelBook = new Book();
+        $model = new Contact();
+        return $this->render('indexmobile', [
+            'modelBook' => $modelBook,
+            'model' => $model,
+        ]);
+    }
+
     public function actionBook()
     {
         $model = new Book();
@@ -102,6 +114,19 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionContactmobile()
+    {
+        $model = new Contact();
+        // if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+        //     Yii::$app->session->setFlash('contactFormSubmitted');
+        //
+        //     return $this->refresh();
+        // }
+        return $this->render('contactmobile', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Displays blog page.
      *
@@ -109,14 +134,29 @@ class SiteController extends Controller
      */
     public function actionBlog()
     {
-        return $this->render('blog');
+        $searchModel = new BlogSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('blog', [
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionBlogmobile()
+    {
+        $searchModel = new BlogSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('blogmobile', [
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     public function actionArticle()
     {
-        $model = new Comments();
-        return $this->render('article', [
-            'model' => $model,
-        ]);
+        return $this->render('article');
+    }
+
+    public function actionArticlemobile()
+    {
+        return $this->render('articlemobile');
     }
 }

@@ -22,19 +22,19 @@ $this->title = 'ПАНСЬКА ВТІХА';
             <br>
             <?php $form = ActiveForm::begin(); ?>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($modelBook, 'ship')->dropdownList(['Cuba Libre'], ['prompt'=>'Выбрать теплоход',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($modelBook, 'event')
-                    ->dropdownList(['Турне','Вечеринка','День рождения','Корпоратив','Свадьба','Прогулка'], ['prompt'=>'Мероприятие',
+                    ->dropdownList(['Турне','Вечеринка','День Рождения','Корпоратив','Свадьба','Прогулка'], ['prompt'=>'Мероприятие',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 label-date application-form">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 label-date application-form">
                     с
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 application-form">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 application-form">
                     <?= $form->field($modelBook, 'datefrom')->label(false)->widget(DateTimePicker::className(), [
                         'name' => 'datetime_10',
                         'id' => 'datetimepicker1',
@@ -49,18 +49,18 @@ $this->title = 'ПАНСЬКА ВТІХА';
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($modelBook, 'route')->dropdownList(['Днепр','Десна'], ['prompt'=>'Маршрут',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($modelBook, 'guests')->dropdownList(['5','10','15','20'], ['prompt'=>'Количество гостей',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 label-date application-form">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 label-date application-form">
                     до
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 application-form">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 application-form">
                     <?= $form->field($modelBook, 'dateto')->label(false)->widget(DateTimePicker::className(), [
                         'name' => 'datetime_10',
                         'id' => 'datetimepicker2',
@@ -75,19 +75,19 @@ $this->title = 'ПАНСЬКА ВТІХА';
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($modelBook, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
                     ->label(false) ?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($modelBook, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
                         'mask' => '+38 (999) 999-99-99'])
                         ->textInput(['placeholder'=>'+38 (___) ___-__-__', 'class' => 'application-form-input']) ?>
                 </div>
-                <div class="col-lg-1 col-md-1 col-sm-1 label-date application-form">
+                <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 label-date application-form">
 
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 application-form">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 application-form">
                     <div class="form-group">
                         <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn-send', 'name' => 'send-button']) ?>
                     </div>
@@ -233,9 +233,10 @@ $this->title = 'ПАНСЬКА ВТІХА';
     <div class="rent-price-description">
         <span class="price">1500 ГРН</span> / ХОДОВОЙ ЧАС<br>
         <span class="price">1500 ГРН</span> / СТОЯНОЧНЫЙ ЧАС (В БУДНИЕ ДНИ)<br>
-        <br class="br-price">
-        МИНИМАЛЬНЫЙ ЗАКАЗ 3 ЧАСА <span class="price">= 4500 ГРН.</span><br>
-        ПРИ ЗАКАЗЕ ОТ <span class="price">10 ЧАСОВ, КЕГА ПИВА В ПОДАРОК!</span>
+        <div class="offer">
+            МИНИМАЛЬНЫЙ ЗАКАЗ 3 ЧАСА <span class="price">= 4500 ГРН.</span><br>
+            ПРИ ЗАКАЗЕ ОТ <span class="price">10 ЧАСОВ, КЕГА ПИВА В ПОДАРОК!</span>
+        </div>
     </div>
     <div class="contact">
         <div class="contact-bg"> </div>
@@ -243,16 +244,16 @@ $this->title = 'ПАНСЬКА ВТІХА';
             <div class="contact-title">СВЯЖИТЕСЬ С НАМИ!</div>
             <div class="contact-form">
                 <?php $form = ActiveForm::begin(); ?>
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($model, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
                     ->label(false) ?>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 application-form">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
                     <?= $form->field($model, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
                         'mask' => '+38 (999) 999-99-99'])
                         ->textInput(['placeholder'=>'+38 (___) ___-__-__', 'class' => 'application-form-input']) ?>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 application-form form-group">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 application-form form-group">
                     <?= Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn-contact-send', 'name' => 'contact-button']) ?>
                 </div>
                 <?php ActiveForm::end(); ?>

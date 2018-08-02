@@ -9,9 +9,9 @@ use yii\bootstrap\ActiveForm;
 
 $this->context->layout = 'contact';
 $this->title = 'Контакты';
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-contact">
-    <br><br>
+<div class="site-contact">    
     <div class="contact-info">
         <?= Html::img('@web/images/locationiconred.png', ['alt' => 'location',
             'style' => ['width' => '22px', 'margin-bottom' => '10px']]) ?>

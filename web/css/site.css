@@ -8,19 +8,43 @@ body {
     height: 3220px;
 }
 
+.layout-container-mobile {
+    width: 100%;
+    height: 3020px;
+}
+
 .layout-contact {
     height: 280px;
+}
+
+.layout-contact-mobile {
+    height: 450px;
 }
 
 .layout-blog {
     height: 1130px;
 }
 
-.layout-article {
+.layout-blog-mobile {
     height: 1130px;
 }
 
+.layout-article {
+    height: 620px;
+}
+
+.layout-article-mobile {
+    height: 620px;
+}
+
 .wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap-mobile {
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
@@ -46,6 +70,11 @@ body {
     padding-bottom: 20px;
 }
 
+.wrap-mobile > .container-mobile {
+    padding-top: 88px;
+    padding-bottom: 20px;
+}
+
 .wrap-contact > .container-contact {
     padding-top: 88px;
     padding-bottom: 20px;
@@ -58,6 +87,11 @@ body {
 
 .container {
     width: 1010px;
+}
+
+.container-mobile {
+    width: 700px;
+    margin: auto;
 }
 
 .container-contact {
@@ -120,6 +154,15 @@ body {
     z-index: 5;
 }
 
+.navbar-mobile {
+    width: 700px;
+    margin: auto;
+}
+
+.breadcrumb {
+    width: 100%;
+}
+
 .logo {
     margin-top: -5px;
     padding-left: 7px;
@@ -148,6 +191,13 @@ body {
     font-size: 25px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+
+.contact-field-mobile {
+    font-size: 20px;
+    width: 100%;
+    height: 55px;
+    color: black;
 }
 
 .contact-name {
@@ -180,6 +230,13 @@ body {
     position: absolute;
 }
 
+.application-mobile {
+    width: 700px;
+    height: 600px;
+    margin-top: 60px;
+    position: absolute;
+}
+
 .application-blur {
     width: 980px;
     height: 410px;
@@ -201,9 +258,29 @@ body {
     z-index: 2;
 }
 
+.application-bg-mobile {
+    width: 700px;
+    height: 600px;
+    overflow: hidden;
+    opacity: 0.6;
+    background-color: #031423;
+    position: absolute;
+    z-index: 2;
+}
+
 .application-content {
     width: 980px;
     height: 410px;
+    color: white;
+    position: absolute;
+    text-align: center;
+    padding: 30px;
+    z-index: 3;
+}
+
+.application-content-mobile {
+    width: 700px;
+    height: 600px;
     color: white;
     position: absolute;
     text-align: center;
@@ -216,7 +293,17 @@ body {
     font-size: 18px;
 }
 
+.application-description-mobile {
+    margin-top: 20px;
+    font-size: 17px;
+}
+
 .application-form {
+    font-size: 20px;
+    height: 70px;
+}
+
+.application-form-mobile {
     font-size: 20px;
     height: 70px;
 }
@@ -235,14 +322,38 @@ body {
     color: black;
 }
 
+.application-form-input-mobile {
+    height: 45px;
+    width: 100%;
+    font-size: 20px;
+    color: black;
+}
+
 .label-date {
     margin-right: -40px;
+    padding-top: 8px;
+}
+
+.label-date-mobile {
     padding-top: 8px;
 }
 
 .btn-send {
     width: 200px;
     height: 45px;
+    font-size: 18px;
+    background-color: #d40064;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: 0px;
+}
+
+.btn-send-mobile {
+    width: 100%;
+    height: 55px;
     font-size: 18px;
     background-color: #d40064;
     font-weight: 600;
@@ -266,10 +377,37 @@ body {
     z-index: 6;
 }
 
+.ship-title-mobile {
+    width: 700px;
+    height: 700px;
+    margin-top: 700px;
+    text-align: right;
+    color: white;
+    font-size: 87px;
+    font-weight: 500;
+    text-shadow: 0px 0px 16px #555555;
+    position: absolute;
+    z-index: 6;
+}
+
 .cuba-libre {
     width: 980px;
     height: 700px;
     margin-top: 1020px;
+    text-align: right;
+    color: white;
+    font-size: 70px;
+    font-weight: 800;
+    transform: scale(1, 1.2);
+    text-shadow: 0px 0px 16px #555555;
+    position: absolute;
+    z-index: 6;
+}
+
+.cuba-libre-mobile {
+    width: 700px;
+    height: 700px;
+    margin-top: 860px;
     text-align: right;
     color: white;
     font-size: 70px;
@@ -321,6 +459,19 @@ body {
     z-index: 6;
 }
 
+.description-mobile {
+    width: 610px;
+    height: 500px;
+    overflow: hidden;
+    left: 90px;
+    margin-top: 910px;
+    text-align: left;
+    color: black;
+    font-size: 17px;
+    position: absolute;
+    z-index: 6;
+}
+
 .more-photo {
     width: 200px;
     height: 45px;
@@ -339,10 +490,41 @@ body {
     z-index: 7;
 }
 
+.more-photo-mobile {
+    width: 700px;
+    height: 55px;
+    /* right: 35%; */
+    font-size: 18px;
+    padding-top: 15px;
+    background-color: #d40064;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    display: block;
+    margin-top: 1300px;
+    cursor: pointer;
+    z-index: 7;
+}
+
 #gallery-bg {
     width: 1050px;
     height: 3500px;
     margin-left: -35px;
+    overflow: hidden;
+    opacity: 0.7;
+    background-color: #000000;
+    display: none;
+    position: absolute;
+    z-index: 10;
+}
+
+#gallery-bg-mobile {
+    width: 700px;
+    height: 620px;
+    margin-top: 670px;
+    /* margin-left: -35px; */
     overflow: hidden;
     opacity: 0.7;
     background-color: #000000;
@@ -364,6 +546,19 @@ body {
     z-index: 11;
 }
 
+.gallery-window-bg-mobile {
+    width: 700px;
+    height: 620px;
+    overflow: hidden;
+    /* margin-left: 5px; */
+    margin-top: 670px;
+    opacity: 1;
+    background-color: #ffffff;
+    display: none;
+    position: absolute;
+    z-index: 11;
+}
+
 .gallery-close-icon {
     width: 17px;
     height: 17px;
@@ -375,7 +570,23 @@ body {
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 11;
+}
+
+.gallery-close-icon-mobile {
+    width: 40px;
+    height: 40px;
+    margin-top: 675px;
+    margin-left: 653px;
+    background-size: 100%;
+    background-image: url('../images/gallerycloseiconmobile.png');
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 13;
 }
 
 .gallery-photo {
@@ -386,7 +597,19 @@ body {
     background-size: 100%;
     background-image: url('../images/gallery/medium/_MG_4386.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 12;
+}
+
+.gallery-photo-mobile {
+    width: 700px;
+    height: 467px;
+    margin-top: 670px;
+    background-size: 100%;
+    background-image: url('../images/gallery/mobile/_MG_4386.jpg');
+    background-repeat: no-repeat;
     display: none;
     position: absolute;
     overflow: hidden;
@@ -404,6 +627,22 @@ body {
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.gallery-previous-mobile {
+    width: 24px;
+    height: 38px;
+    margin-top: 1185px;
+    /* margin-left: 25px; */
+    background-size: 100%;
+    background-image: url('../images/galleryprevious.png');
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
     z-index: 15;
 }
 
@@ -418,6 +657,22 @@ body {
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.gallery-next-mobile {
+    width: 24px;
+    height: 38px;
+    margin-top: 1185px;
+    margin-left: 676px;
+    background-size: 100%;
+    background-image: url('../images/gallerynext.png');
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
     z-index: 15;
 }
 
@@ -426,1458 +681,1064 @@ body {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -5757px;
+    margin-left: -5762px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4331.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-27-bg {
+.gallery-icon-27-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -5757px;
+    margin-top: 1145px;
+    margin-left: -5794px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-27-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-27-bg:hover + .gallery-icon-27-magnifier {
-    display: block;
-}
-
-.gallery-icon-27-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -5689px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4331.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-27:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4331.png');
+}
+
+.gallery-icon-27-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4331.png');
 }
 
 .gallery-icon-26 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -5549px;
+    margin-left: -5554px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4336.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-26-bg {
+.gallery-icon-26-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -5549px;
+    margin-top: 1145px;
+    margin-left: -5586px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-26-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-26-bg:hover + .gallery-icon-26-magnifier {
-    display: block;
-}
-
-.gallery-icon-26-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -5481px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4336.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-26:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4336.png');
+}
+
+.gallery-icon-26-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4336.png');
 }
 
 .gallery-icon-25 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -5341px;
+    margin-left: -5346px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4337.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-25-bg {
+.gallery-icon-25-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -5341px;
+    margin-top: 1145px;
+    margin-left: -5378px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-25-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-25-bg:hover + .gallery-icon-25-magnifier {
-    display: block;
-}
-
-.gallery-icon-25-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -5273px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4337.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-25:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4337.png');
+}
+
+.gallery-icon-25-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4337.png');
 }
 
 .gallery-icon-24 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -5133px;
+    margin-left: -5138px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4338.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-24-bg {
+.gallery-icon-24-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -5133px;
+    margin-top: 1145px;
+    margin-left: -5170px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-24-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-24-bg:hover + .gallery-icon-24-magnifier {
-    display: block;
-}
-
-.gallery-icon-24-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -5065px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4338.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-24:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4338.png');
+}
+
+.gallery-icon-24-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4338.png');
 }
 
 .gallery-icon-23 {
-    width: 193px;
+    width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -4925px;
+    margin-left: -4930px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4341.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-23-bg {
-    width: 193px;
+.gallery-icon-23-mobile {
+    width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -4925px;
+    margin-top: 1145px;
+    margin-left: -4962px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-23-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-23-bg:hover + .gallery-icon-23-magnifier {
-    display: block;
-}
-
-.gallery-icon-23-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -4857px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4341.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-23:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4341.png');
+}
+
+.gallery-icon-23-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4341.png');
 }
 
 .gallery-icon-22 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -4718px;
+    margin-left: -4722px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4348.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-22-bg {
+.gallery-icon-22-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -4718px;
+    margin-top: 1145px;
+    margin-left: -4754px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-22-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-22-bg:hover + .gallery-icon-22-magnifier {
-    display: block;
-}
-
-.gallery-icon-22-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -4650px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4348.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-22:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4348.png');
+}
+
+.gallery-icon-22-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4348.png');
 }
 
 .gallery-icon-21 {
-    width: 193px;
+    width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -4510px;
+    margin-left: -4514px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4351.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-21-bg {
-    width: 193px;
+.gallery-icon-21-mobile {
+    width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -4510px;
+    margin-top: 1145px;
+    margin-left: -4546px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-21-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-21-bg:hover + .gallery-icon-21-magnifier {
-    display: block;
-}
-
-.gallery-icon-21-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -4442px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4351.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-21:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4351.png');
+}
+
+.gallery-icon-21-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4351.png');
 }
 
 .gallery-icon-20 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -4303px;
+    margin-left: -4306px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4354.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-20-bg {
+.gallery-icon-20-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -4303px;
+    margin-top: 1145px;
+    margin-left: -4338px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-20-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-20-bg:hover + .gallery-icon-20-magnifier {
-    display: block;
-}
-
-.gallery-icon-20-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -4235px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4354.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-20:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4354.png');
+}
+
+.gallery-icon-20-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4354.png');
 }
 
 .gallery-icon-19 {
-    width: 193px;
+    width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -4095px;
+    margin-left: -4098px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4364.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-19-bg {
-    width: 193px;
+.gallery-icon-19-mobile {
+    width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -4095px;
+    margin-top: 1145px;
+    margin-left: -4130px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-19-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-19-bg:hover + .gallery-icon-19-magnifier {
-    display: block;
-}
-
-.gallery-icon-19-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -4027px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4364.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-19:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4364.png');
+}
+
+.gallery-icon-19-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4364.png');
 }
 
 .gallery-icon-18 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -3888px;
+    margin-left: -3890px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4371.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-18-bg {
+.gallery-icon-18-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -3888px;
+    margin-top: 1145px;
+    margin-left: -3922px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-18-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-18-bg:hover + .gallery-icon-18-magnifier {
-    display: block;
-}
-
-.gallery-icon-18-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -3820px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4371.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-18:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4371.png');
+}
+
+.gallery-icon-18-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4371.png');
 }
 
 .gallery-icon-17 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -3680px;
+    margin-left: -3682px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4372.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-17-bg {
+.gallery-icon-17-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -3680px;
+    margin-top: 1145px;
+    margin-left: -3714px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-17-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-17-bg:hover + .gallery-icon-17-magnifier {
-    display: block;
-}
-
-.gallery-icon-17-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -3612px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4372.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-17:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4372.png');
+}
+
+.gallery-icon-17-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4372.png');
 }
 
 .gallery-icon-16 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -3472px;
+    margin-left: -3474px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4373.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-16-bg {
+.gallery-icon-16-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -3472px;
+    margin-top: 1145px;
+    margin-left: -3506px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-16-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-16-bg:hover + .gallery-icon-16-magnifier {
-    display: block;
-}
-
-.gallery-icon-16-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -3404px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4373.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-16:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4373.png');
+}
+
+.gallery-icon-16-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4373.png');
 }
 
 .gallery-icon-15 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -3264px;
+    margin-left: -3266px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4374.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-15-bg {
+.gallery-icon-15-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -3264px;
+    margin-top: 1145px;
+    margin-left: -3298px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-15-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-15-bg:hover + .gallery-icon-15-magnifier {
-    display: block;
-}
-
-.gallery-icon-15-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -3196px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4374.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-15:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4374.png');
+}
+
+.gallery-icon-15-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4374.png');
 }
 
 .gallery-icon-14 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -3056px;
+    margin-left: -3058px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4383.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-14-bg {
+.gallery-icon-14-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -3056px;
+    margin-top: 1145px;
+    margin-left: -3090px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-14-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-14-bg:hover + .gallery-icon-14-magnifier {
-    display: block;
-}
-
-.gallery-icon-14-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -2988px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4383.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-14:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4383.png');
+}
+
+.gallery-icon-14-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4383.png');
 }
 
 .gallery-icon-13 {
-    width: 193px;
+    width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -2848px;
+    margin-left: -2850px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4384.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-13-bg {
-    width: 193px;
+.gallery-icon-13-mobile {
+    width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -2848px;
+    margin-top: 1145px;
+    margin-left: -2882px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-13-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-13-bg:hover + .gallery-icon-13-magnifier {
-    display: block;
-}
-
-.gallery-icon-13-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -2780px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4384.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-13:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4384.png');
+}
+
+.gallery-icon-13-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4384.png');
 }
 
 .gallery-icon-12 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -2641px;
+    margin-left: -2642px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4386.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-12-bg {
+.gallery-icon-12-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -2641px;
+    margin-top: 1145px;
+    margin-left: -2674px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-12-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-12-bg:hover + .gallery-icon-12-magnifier {
-    display: block;
-}
-
-.gallery-icon-12-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -2573px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4386.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-12:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4386.png');
+}
+
+.gallery-icon-12-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4386.png');
 }
 
 .gallery-icon-11 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -2433px;
+    margin-left: -2434px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4387.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-11-bg {
+.gallery-icon-11-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -2433px;
+    margin-top: 1145px;
+    margin-left: -2466px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-11-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-11-bg:hover + .gallery-icon-11-magnifier {
-    display: block;
-}
-
-.gallery-icon-11-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -2365px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4387.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-11:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4387.png');
+}
+
+.gallery-icon-11-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4387.png');
 }
 
 .gallery-icon-10 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -2225px;
+    margin-left: -2226px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4389.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-10-bg {
+.gallery-icon-10-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -2225px;
+    margin-top: 1145px;
+    margin-left: -2258px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-10-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-10-bg:hover + .gallery-icon-10-magnifier {
-    display: block;
-}
-
-.gallery-icon-10-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -2157px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4389.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-10:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4389.png');
+}
+
+.gallery-icon-10-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4389.png');
 }
 
 .gallery-icon-9 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -2017px;
+    margin-left: -2018px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4390.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-9-bg {
+.gallery-icon-9-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -2017px;
+    margin-top: 1145px;
+    margin-left: -2050px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-9-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-9-bg:hover + .gallery-icon-9-magnifier {
-    display: block;
-}
-
-.gallery-icon-9-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -1949px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4390.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-9:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4390.png');
+}
+
+.gallery-icon-9-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4390.png');
 }
 
 .gallery-icon-8 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -1809px;
+    margin-left: -1810px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4392.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-8-bg {
+.gallery-icon-8-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -1809px;
+    margin-top: 1145px;
+    margin-left: -1842px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-8-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-8-bg:hover + .gallery-icon-8-magnifier {
-    display: block;
-}
-
-.gallery-icon-8-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -1741px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4392.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-8:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4392.png');
+}
+
+.gallery-icon-8-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4392.png');
 }
 
 .gallery-icon-7 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -1601px;
+    margin-left: -1602px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4393.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-7-bg {
+.gallery-icon-7-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -1601px;
+    margin-top: 1145px;
+    margin-left: -1634px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-7-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-7-bg:hover + .gallery-icon-7-magnifier {
-    display: block;
-}
-
-.gallery-icon-7-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -1533px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4393.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-7:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4393.png');
+}
+
+.gallery-icon-7-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4393.png');
 }
 
 .gallery-icon-6 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -1393px;
+    margin-left: -1394px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4398.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-6-bg {
+.gallery-icon-6-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -1393px;
+    margin-top: 1145px;
+    margin-left: -1426px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-6-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-6-bg:hover + .gallery-icon-6-magnifier {
-    display: block;
-}
-
-.gallery-icon-6-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -1325px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4398.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-6:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4398.png');
+}
+
+.gallery-icon-6-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4398.png');
 }
 
 .gallery-icon-5 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -1185px;
+    margin-left: -1186px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4404.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-5-bg {
+.gallery-icon-5-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -1185px;
+    margin-top: 1145px;
+    margin-left: -1218px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-5-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-5-bg:hover + .gallery-icon-5-magnifier {
-    display: block;
-}
-
-.gallery-icon-5-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -1117px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4404.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-5:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4404.png');
+}
+
+.gallery-icon-5-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4404.png');
 }
 
 .gallery-icon-4 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -977px;
+    margin-left: -978px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4407.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-4-bg {
+.gallery-icon-4-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -977px;
+    margin-top: 1145px;
+    margin-left: -1010px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-4-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-4-bg:hover + .gallery-icon-4-magnifier {
-    display: block;
-}
-
-.gallery-icon-4-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -909px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4407.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-4:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4407.png');
+}
+
+.gallery-icon-4-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4407.png');
 }
 
 .gallery-icon-3 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -769px;
+    margin-left: -770px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4410.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-3-bg {
+.gallery-icon-3-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -769px;
+    margin-top: 1145px;
+    margin-left: -802px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-3-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-3-bg:hover + .gallery-icon-3-magnifier {
-    display: block;
-}
-
-.gallery-icon-3-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -701px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4410.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-3:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4410.png');
+}
+
+.gallery-icon-3-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4410.png');
 }
 
 .gallery-icon-2 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -561px;
+    margin-left: -562px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4414.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-2-bg {
+.gallery-icon-2-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -561px;
+    margin-top: 1145px;
+    margin-left: -594px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-2-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-2-bg:hover + .gallery-icon-2-magnifier {
-    display: block;
-}
-
-.gallery-icon-2-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -493px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4414.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
 }
 
+.layout-container .gallery-icon-2:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4414.png');
+}
+
+.gallery-icon-2-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4414.png');
+}
 
 .gallery-icon-1 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -353px;
+    margin-left: -354px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4418.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon-1-bg {
+.gallery-icon-1-mobile {
+    width: 194px;
+    height: 129px;
+    margin-top: 1145px;
+    margin-left: -386px;
+    background-size: 100%;
+    background-image: url('../images/gallery/small/_MG_4418.jpg');
+    background-repeat: no-repeat;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon-1:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4418.png');
+}
+
+.gallery-icon-1-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4418.png');
+}
+
+.gallery-icon0 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: -353px;
-    background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon-1-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon-1-bg:hover + .gallery-icon-1-magnifier {
-    display: block;
-}
-
-.gallery-icon-1-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -285px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
-    background-repeat: no-repeat;
-    opacity: 1;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 14;
-}
-
-
-.gallery-icon0 {
-    width: 193px;
-    height: 129px;
-    margin-top: 1383px;
-    margin-left: -145px;
+    margin-left: -146px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4423.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon0-bg {
-    width: 193px;
+.gallery-icon0-mobile {
+    width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: -145px;
+    margin-top: 1145px;
+    margin-left: -178px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon0-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon0-bg:hover + .gallery-icon0-magnifier {
-    display: block;
-}
-
-.gallery-icon0-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: -77px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4423.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon0:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4423.png');
+}
+
+.gallery-icon0-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4423.png');
 }
 
 .gallery-icon1 {
@@ -1888,48 +1749,34 @@ body {
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4590.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon1-bg {
+.gallery-icon1-mobile {
     width: 86px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 62px;
+    margin-top: 1145px;
+    margin-left: 30px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon1-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon1-bg:hover + .gallery-icon1-magnifier {
-    display: block;
-}
-
-.gallery-icon1-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 80px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4590.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon1:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4590.png');
+}
+
+.gallery-icon1-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4590.png');
 }
 
 .gallery-icon2 {
@@ -1940,48 +1787,34 @@ body {
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4559.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon2-bg {
+.gallery-icon2-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 162px;
+    margin-top: 1145px;
+    margin-left: 130px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon2-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon2-bg:hover + .gallery-icon2-magnifier {
-    display: block;
-}
-
-.gallery-icon2-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 230px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4559.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon2:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4559.png');
+}
+
+.gallery-icon2-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4559.png');
 }
 
 .gallery-icon3 {
@@ -1992,48 +1825,34 @@ body {
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4591.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon3-bg {
+.gallery-icon3-mobile {
     width: 86px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 370px;
+    margin-top: 1145px;
+    margin-left: 338px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon3-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon3-bg:hover + .gallery-icon3-magnifier {
-    display: block;
-}
-
-.gallery-icon3-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 388px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4591.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon3:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4591.png');
+}
+
+.gallery-icon3-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4591.png');
 }
 
 .gallery-icon4 {
@@ -2044,100 +1863,72 @@ body {
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4553.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon4-bg {
+.gallery-icon4-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 470px;
+    margin-top: 1145px;
+    margin-left: 438px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon4-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon4-bg:hover + .gallery-icon4-magnifier {
-    display: block;
-}
-
-.gallery-icon4-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 538px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4553.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon4:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4553.png');
+}
+
+.gallery-icon4-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4553.png');
 }
 
 .gallery-icon5 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 679px;
+    margin-left: 678px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4397.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon5-bg {
+.gallery-icon5-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 679px;
+    margin-top: 1145px;
+    margin-left: 646px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon5-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon5-bg:hover + .gallery-icon5-magnifier {
-    display: block;
-}
-
-.gallery-icon5-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 747px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4397.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon5:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4397.png');
+}
+
+.gallery-icon5-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4397.png');
 }
 
 
@@ -2145,1404 +1936,1026 @@ body {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 887px;
+    margin-left: 886px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4427.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon6-bg {
+.gallery-icon6-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 887px;
+    margin-top: 1145px;
+    margin-left: 854px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon6-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon6-bg:hover + .gallery-icon6-magnifier {
-    display: block;
-}
-
-.gallery-icon6-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 955px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4427.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon6:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4427.png');
+}
+
+.gallery-icon6-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4427.png');
 }
 
 .gallery-icon7 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 1095px;
+    margin-left: 1094px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4430.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon7-bg {
+.gallery-icon7-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 1095px;
+    margin-top: 1145px;
+    margin-left: 1062px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon7-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon7-bg:hover + .gallery-icon7-magnifier {
-    display: block;
-}
-
-.gallery-icon7-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 1163px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4430.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon7:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4430.png');
+}
+
+.gallery-icon7-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4430.png');
 }
 
 .gallery-icon8 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 1303px;
+    margin-left: 1302px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4434.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon8-bg {
+.gallery-icon8-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 1303px;
+    margin-top: 1145px;
+    margin-left: 1270px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon8-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon8-bg:hover + .gallery-icon8-magnifier {
-    display: block;
-}
-
-.gallery-icon8-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 1371px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4434.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon8:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4434.png');
+}
+
+.gallery-icon8-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4434.png');
 }
 
 .gallery-icon9 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 1511px;
+    margin-left: 1510px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4436.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon9-bg {
+.gallery-icon9-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 1511px;
+    margin-top: 1145px;
+    margin-left: 1478px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon9-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon9-bg:hover + .gallery-icon9-magnifier {
-    display: block;
-}
-
-.gallery-icon9-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 1579px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4436.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon9:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4436.png');
+}
+
+.gallery-icon9-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4436.png');
 }
 
 .gallery-icon10 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 1719px;
+    margin-left: 1718px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4437.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon10-bg {
+.gallery-icon10-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 1719px;
+    margin-top: 1145px;
+    margin-left: 1686px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon10-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon10-bg:hover + .gallery-icon10-magnifier {
-    display: block;
-}
-
-.gallery-icon10-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 1787px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4437.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon10:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4437.png');
+}
+
+.gallery-icon10-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4437.png');
 }
 
 .gallery-icon11 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 1927px;
+    margin-left: 1926px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4441.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon11-bg {
+.gallery-icon11-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 1927px;
+    margin-top: 1145px;
+    margin-left: 1894px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon11-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon11-bg:hover + .gallery-icon11-magnifier {
-    display: block;
-}
-
-.gallery-icon11-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 1995px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4441.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon11:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4441.png');
+}
+
+.gallery-icon11-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4441.png');
 }
 
 .gallery-icon12 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 2135px;
+    margin-left: 2134px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4442.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon12-bg {
+.gallery-icon12-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 2135px;
+    margin-top: 1145px;
+    margin-left: 2102px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon12-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon12-bg:hover + .gallery-icon12-magnifier {
-    display: block;
-}
-
-.gallery-icon12-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 2203px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4442.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon12:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4442.png');
+}
+
+.gallery-icon12-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4442.png');
 }
 
 .gallery-icon13 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 2343px;
+    margin-left: 2342px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4453.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon13-bg {
+.gallery-icon13-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 2343px;
+    margin-top: 1145px;
+    margin-left: 2310px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon13-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon13-bg:hover + .gallery-icon13-magnifier {
-    display: block;
-}
-
-.gallery-icon13-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 2411px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4453.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon13:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4453.png');
+}
+
+.gallery-icon13-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4453.png');
 }
 
 .gallery-icon14 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 2551px;
+    margin-left: 2550px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4454.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon14-bg {
+.gallery-icon14-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 2551px;
+    margin-top: 1145px;
+    margin-left: 2518px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon14-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon14-bg:hover + .gallery-icon14-magnifier {
-    display: block;
-}
-
-.gallery-icon14-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 2619px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4454.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon14:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4454.png');
+}
+
+.gallery-icon14-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4454.png');
 }
 
 .gallery-icon15 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 2759px;
+    margin-left: 2758px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4462.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon15-bg {
+.gallery-icon15-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 2759px;
+    margin-top: 1145px;
+    margin-left: 2726px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon15-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon15-bg:hover + .gallery-icon15-magnifier {
-    display: block;
-}
-
-.gallery-icon15-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 2827px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4462.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon15:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4462.png');
+}
+
+.gallery-icon15-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4462.png');
 }
 
 .gallery-icon16 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 2967px;
+    margin-left: 2966px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4467.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon16-bg {
+.gallery-icon16-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 2967px;
+    margin-top: 1145px;
+    margin-left: 2934px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon16-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon16-bg:hover + .gallery-icon16-magnifier {
-    display: block;
-}
-
-.gallery-icon16-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 3035px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4467.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon16:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4467.png');
+}
+
+.gallery-icon16-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4467.png');
 }
 
 .gallery-icon17 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 3175px;
+    margin-left: 3174px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4468.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon17-bg {
+.gallery-icon17-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 3175px;
+    margin-top: 1145px;
+    margin-left: 3142px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon17-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon17-bg:hover + .gallery-icon17-magnifier {
-    display: block;
-}
-
-.gallery-icon17-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 3243px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4468.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon17:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4468.png');
+}
+
+.gallery-icon17-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4468.png');
 }
 
 .gallery-icon18 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 3383px;
+    margin-left: 3382px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4470.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon18-bg {
+.gallery-icon18-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 3383px;
+    margin-top: 1145px;
+    margin-left: 3350px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon18-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon18-bg:hover + .gallery-icon18-magnifier {
-    display: block;
-}
-
-.gallery-icon18-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 3451px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4470.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon18:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4470.png');
+}
+
+.gallery-icon18-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4470.png');
 }
 
 .gallery-icon19 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 3591px;
+    margin-left: 3590px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4483.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon19-bg {
+.gallery-icon19-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 3591px;
+    margin-top: 1145px;
+    margin-left: 3558px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon19-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon19-bg:hover + .gallery-icon19-magnifier {
-    display: block;
-}
-
-.gallery-icon19-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 3659px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4483.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon19:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4483.png');
+}
+
+.gallery-icon19-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4483.png');
 }
 
 .gallery-icon20 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 3799px;
+    margin-left: 3798px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4495.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon20-bg {
+.gallery-icon20-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 3799px;
+    margin-top: 1145px;
+    margin-left: 3766px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon20-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon20-bg:hover + .gallery-icon20-magnifier {
-    display: block;
-}
-
-.gallery-icon20-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 3867px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4495.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon20:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4495.png');
+}
+
+.gallery-icon20-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4495.png');
 }
 
 .gallery-icon21 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 4007px;
+    margin-left: 4006px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4509.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon21-bg {
+.gallery-icon21-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 4007px;
+    margin-top: 1145px;
+    margin-left: 3974px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon21-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon21-bg:hover + .gallery-icon21-magnifier {
-    display: block;
-}
-
-.gallery-icon21-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 4075px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4509.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon21:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4509.png');
+}
+
+.gallery-icon21-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4509.png');
 }
 
 .gallery-icon22 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 4215px;
+    margin-left: 4214px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4556.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon22-bg {
+.gallery-icon22-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 4215px;
+    margin-top: 1145px;
+    margin-left: 4182px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon22-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon22-bg:hover + .gallery-icon22-magnifier {
-    display: block;
-}
-
-.gallery-icon22-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 4283px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4556.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon22:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4556.png');
+}
+
+.gallery-icon22-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4556.png');
 }
 
 .gallery-icon23 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 4423px;
+    margin-left: 4422px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4557.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon23-bg {
+.gallery-icon23-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 4423px;
+    margin-top: 1145px;
+    margin-left: 4390px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon23-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon23-bg:hover + .gallery-icon23-magnifier {
-    display: block;
-}
-
-.gallery-icon23-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 4491px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4557.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon23:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4557.png');
+}
+
+.gallery-icon23-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4557.png');
 }
 
 .gallery-icon24 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 4631px;
+    margin-left: 4630px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4565.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon24-bg {
+.gallery-icon24-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 4631px;
+    margin-top: 1145px;
+    margin-left: 4598px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon24-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon24-bg:hover + .gallery-icon24-magnifier {
-    display: block;
-}
-
-.gallery-icon24-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 4699px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4565.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon24:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4565.png');
+}
+
+.gallery-icon24-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4565.png');
 }
 
 .gallery-icon25 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 4839px;
+    margin-left: 4838px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4566.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon25-bg {
+.gallery-icon25-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 4839px;
+    margin-top: 1145px;
+    margin-left: 4806px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon25-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon25-bg:hover + .gallery-icon25-magnifier {
-    display: block;
-}
-
-.gallery-icon25-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 4907px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4566.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon25:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4566.png');
+}
+
+.gallery-icon25-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4566.png');
 }
 
 .gallery-icon26 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5047px;
+    margin-left: 5046px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4567.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon26-bg {
+.gallery-icon26-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5047px;
+    margin-top: 1145px;
+    margin-left: 5014px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon26-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon26-bg:hover + .gallery-icon26-magnifier {
-    display: block;
-}
-
-.gallery-icon26-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 5115px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4567.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon26:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4567.png');
+}
+
+.gallery-icon26-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4567.png');
 }
 
 .gallery-icon27 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5255px;
+    margin-left: 5254px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4572.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon27-bg {
+.gallery-icon27-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5255px;
+    margin-top: 1145px;
+    margin-left: 5222px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon27-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon27-bg:hover + .gallery-icon27-magnifier {
-    display: block;
-}
-
-.gallery-icon27-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 5323px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4572.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon27:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4572.png');
+}
+
+.gallery-icon27-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4572.png');
 }
 
 .gallery-icon28 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5463px;
+    margin-left: 5462px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4588.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon28-bg {
+.gallery-icon28-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5463px;
+    margin-top: 1145px;
+    margin-left: 5430px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon28-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon28-bg:hover + .gallery-icon28-magnifier {
-    display: block;
-}
-
-.gallery-icon28-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 5531px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4588.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon28:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4588.png');
+}
+
+.gallery-icon28-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4588.png');
 }
 
 .gallery-icon29 {
     width: 86px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5671px;
+    margin-left: 5670px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4589.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon29-bg {
+.gallery-icon29-mobile {
     width: 86px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5671px;
+    margin-top: 1145px;
+    margin-left: 5638px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon29-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon29-bg:hover + .gallery-icon29-magnifier {
-    display: block;
-}
-
-.gallery-icon29-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 5689px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4589.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon29:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4589.png');
+}
+
+.gallery-icon29-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4589.png');
 }
 
 .gallery-icon30 {
     width: 86px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5771px;
+    margin-left: 5770px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4592.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon30-bg {
+.gallery-icon30-mobile {
     width: 86px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5771px;
+    margin-top: 1145px;
+    margin-left: 5738px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon30-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon30-bg:hover + .gallery-icon30-magnifier {
-    display: block;
-}
-
-.gallery-icon30-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 5789px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4592.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon30:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4592.png');
+}
+
+.gallery-icon30-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4592.png');
 }
 
 .gallery-icon31 {
     width: 86px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5871px;
+    margin-left: 5870px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4593.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon31-bg {
+.gallery-icon31-mobile {
     width: 86px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5871px;
+    margin-top: 1145px;
+    margin-left: 5838px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon31-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon31-bg:hover + .gallery-icon31-magnifier {
-    display: block;
-}
-
-.gallery-icon31-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 5889px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4593.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon31:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4593.png');
+}
+
+.gallery-icon31-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4593.png');
 }
 
 .gallery-icon32 {
     width: 194px;
     height: 129px;
     margin-top: 1383px;
-    margin-left: 5971px;
+    margin-left: 5970px;
     background-size: 100%;
     background-image: url('../images/gallery/small/_MG_4594.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
+    cursor: pointer;
     z-index: 12;
 }
 
-.gallery-icon32-bg {
+.gallery-icon32-mobile {
     width: 194px;
     height: 129px;
-    margin-top: 1383px;
-    margin-left: 5971px;
+    margin-top: 1145px;
+    margin-left: 5938px;
     background-size: 100%;
-    background-color: transparent;
-    opacity: 0.6;
-    display: none;
-    position: absolute;
-    overflow: hidden;
-    z-index: 13;
-}
-
-.layout-container .gallery-icon32-bg:hover {
-    background-color: #000000;
-}
-
-.layout-container .gallery-icon32-bg:hover + .gallery-icon32-magnifier {
-    display: block;
-}
-
-.gallery-icon32-magnifier {
-    width: 57px;
-    height: 57px;
-    margin-top: 1420px;
-    margin-left: 6039px;
-    background-size: 100%;
-    background-image: url('../images/magnifier.png');
+    background-image: url('../images/gallery/small/_MG_4594.jpg');
     background-repeat: no-repeat;
-    opacity: 1;
     display: none;
     position: absolute;
     overflow: hidden;
-    z-index: 14;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.layout-container .gallery-icon32:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4594.png');
+}
+
+.gallery-icon32-mobile:hover {
+    background-image: url('../images/gallery/smallhover/_MG_4594.png');
 }
 
 
@@ -3550,6 +2963,19 @@ body {
     width: 980px;
     height: 100px;
     margin-top: 1540px;
+    text-align: center;
+    color: black;
+    font-size: 42px;
+    font-weight: 800;
+    transform: scale(1, 1.1);
+    position: absolute;
+    z-index: 6;
+}
+
+.organize-mobile {
+    width: 700px;
+    height: 100px;
+    margin-top: 1420px;
     text-align: center;
     color: black;
     font-size: 42px;
@@ -3572,10 +2998,36 @@ body {
     z-index: 3;
 }
 
+.tour-mobile {
+    width: 148px;
+    height: 116px;
+    margin-top: 1530px;
+    left: 50px;
+    background-size: 100%;
+    background-image: url('../images/tour.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .tour-description {
     width: 240px;
     height: 100px;
     margin-top: 1810px;
+    /* background-color: #aaaaaa; */
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.tour-description-mobile {
+    width: 240px;
+    height: 100px;
+    margin-top: 1670px;
     /* background-color: #aaaaaa; */
     color: black;
     font-size: 24px;
@@ -3598,6 +3050,19 @@ body {
     z-index: 3;
 }
 
+.fireworkleft-mobile {
+    width: 52px;
+    height: 50px;
+    margin-top: 1530px;
+    left: 480px;
+    background-size: 100%;
+    background-image: url('../images/fireworkleft.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .fireworkright {
     width: 65px;
     height: 68px;
@@ -3611,11 +3076,37 @@ body {
     z-index: 3;
 }
 
+.fireworkright-mobile {
+    width: 65px;
+    height: 68px;
+    margin-top: 1520px;
+    left: 615px;
+    background-size: 100%;
+    background-image: url('../images/fireworkright.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .boat {
     width: 131px;
     height: 81px;
     margin-top: 1700px;
     left: 415px;
+    background-size: 100%;
+    background-image: url('../images/boat.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.boat-mobile {
+    width: 131px;
+    height: 81px;
+    margin-top: 1560px;
+    left: 515px;
     background-size: 100%;
     background-image: url('../images/boat.png');
     background-repeat: no-repeat;
@@ -3638,11 +3129,38 @@ body {
     z-index: 3;
 }
 
+.party-description-mobile {
+    width: 240px;
+    height: 100px;
+    margin-top: 1670px;
+    left: 465px;
+    /* background-color: #aaaaaa; */
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .disco {
     width: 119px;
     height: 116px;
     margin-top: 1665px;
     left: 790px;
+    background-size: 100%;
+    background-image: url('../images/disco.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.disco-mobile {
+    width: 119px;
+    height: 116px;
+    margin-top: 1765px;
+    left: 290px;
     background-size: 100%;
     background-image: url('../images/disco.png');
     background-repeat: no-repeat;
@@ -3665,11 +3183,38 @@ body {
     z-index: 3;
 }
 
+.disco-description-mobile {
+    width: 240px;
+    height: 100px;
+    margin-top: 1910px;
+    left: 235px;
+    /* background-color: #aaaaaa; */
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .romantic {
     width: 115px;
     height: 115px;
     margin-top: 1980px;
     left: 240px;
+    background-size: 100%;
+    background-image: url('../images/romantic.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.romantic-mobile {
+    width: 115px;
+    height: 115px;
+    margin-top: 1980px;
+    left: 65px;
     background-size: 100%;
     background-image: url('../images/romantic.png');
     background-repeat: no-repeat;
@@ -3692,6 +3237,19 @@ body {
     z-index: 3;
 }
 
+.romantic-description-mobile {
+    width: 240px;
+    height: 100px;
+    margin-top: 2110px;
+    /* background-color: #aaaaaa; */
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .other {
     width: 119px;
     height: 115px;
@@ -3705,11 +3263,38 @@ body {
     z-index: 3;
 }
 
+.other-mobile {
+    width: 119px;
+    height: 115px;
+    margin-top: 1980px;
+    left: 540px;
+    background-size: 100%;
+    background-image: url('../images/other.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .other-description {
     width: 240px;
     height: 100px;
     margin-top: 2110px;
     left: 565px;
+    /* background-color: #aaaaaa; */
+    color: black;
+    font-size: 24px;
+    text-align: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.other-description-mobile {
+    width: 240px;
+    height: 100px;
+    margin-top: 2110px;
+    left: 465px;
     /* background-color: #aaaaaa; */
     color: black;
     font-size: 24px;
@@ -3742,11 +3327,24 @@ body {
     z-index: 3;
 }
 
+.characteristic-title-mobile {
+    width: 700px;
+    height: 100px;
+    margin-top: 2240px;
+    text-align: center;
+    color: black;
+    font-size: 37px;
+    transform: scale(1, 1.1);
+    font-weight: 800;
+    position: absolute;
+    z-index: 3;
+}
+
 .lounge {
     width: 842px;
     height: 432px;
     margin-top: 2345px;
-    left: 600px;
+    left: 599px;
     background-size: 100%;
     background-image: url('../images/lounge.png');
     background-repeat: no-repeat;
@@ -3781,7 +3379,32 @@ body {
     z-index: 3;
 }
 
+.passenger-capacity-line-mobile {
+    width: 1px;
+    height: 77px;
+    margin-top: 2368px;
+    left: 4px;
+    background-size: 100%;
+    background-image: url('../images/passenger-capacity-line.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .passenger-capacity-item1 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2355px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.passenger-capacity-item1-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2355px;
@@ -3805,6 +3428,18 @@ body {
     z-index: 3;
 }
 
+.passenger-capacity-item2-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2413px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .passenger-capacity-item3 {
     width: 9px;
     height: 13px;
@@ -3817,7 +3452,34 @@ body {
     z-index: 3;
 }
 
+.passenger-capacity-item3-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2442px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .passenger-capacity {
+    width: 280px;
+    height: 25px;
+    overflow: hidden;
+    left: 30px;
+    margin-top: 2350px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 3;
+}
+
+.passenger-capacity-mobile {
     width: 280px;
     height: 25px;
     overflow: hidden;
@@ -3846,7 +3508,34 @@ body {
     z-index: 3;
 }
 
+.passenger-capacity-list-mobile {
+    width: 280px;
+    height: 60px;
+    overflow: hidden;
+    left: 30px;
+    margin-top: 2405px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 19px;
+    position: absolute;
+    z-index: 3;
+}
+
 .on-board-line1 {
+    width: 1px;
+    height: 280px;
+    margin-top: 2520px;
+    left: 4px;
+    background-size: 100%;
+    background-image: url('../images/on-board-line1.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-line1-mobile {
     width: 1px;
     height: 280px;
     margin-top: 2520px;
@@ -3871,7 +3560,31 @@ body {
     z-index: 3;
 }
 
+.on-board-item11-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2517px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item12 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2572px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item12-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2572px;
@@ -3895,7 +3608,31 @@ body {
     z-index: 3;
 }
 
+.on-board-item13-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2600px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item14 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2656px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item14-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2656px;
@@ -3919,7 +3656,31 @@ body {
     z-index: 3;
 }
 
+.on-board-item15-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2735px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item16 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2762px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item16-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2762px;
@@ -3943,7 +3704,34 @@ body {
     z-index: 3;
 }
 
+.on-board-item17-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2790px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board {
+    width: 280px;
+    height: 25px;
+    overflow: hidden;
+    left: 30px;
+    margin-top: 2510px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 3;
+}
+
+.on-board-mobile {
     width: 280px;
     height: 25px;
     overflow: hidden;
@@ -3972,7 +3760,34 @@ body {
     z-index: 3;
 }
 
+.on-board-list1-mobile {
+    width: 280px;
+    height: 260px;
+    overflow: hidden;
+    left: 30px;
+    margin-top: 2565px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 19px;
+    position: absolute;
+    z-index: 3;
+}
+
 .on-board-line2 {
+    width: 1px;
+    height: 195px;
+    margin-top: 2578px;
+    left: 334px;
+    background-size: 100%;
+    background-image: url('../images/on-board-line2.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-line2-mobile {
     width: 1px;
     height: 195px;
     margin-top: 2578px;
@@ -3998,7 +3813,33 @@ body {
     z-index: 3;
 }
 
+.on-board-item21-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2572px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item22 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2600px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item22-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2600px;
@@ -4024,7 +3865,33 @@ body {
     z-index: 3;
 }
 
+.on-board-item23-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2628px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item24 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2656px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item24-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2656px;
@@ -4050,7 +3917,33 @@ body {
     z-index: 3;
 }
 
+.on-board-item25-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2683px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item26 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2709px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item26-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2709px;
@@ -4076,7 +3969,33 @@ body {
     z-index: 3;
 }
 
+.on-board-item27-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2736px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .on-board-item28 {
+    width: 9px;
+    height: 13px;
+    margin-top: 2763px;
+    left: 330px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.on-board-item28-mobile {
     width: 9px;
     height: 13px;
     margin-top: 2763px;
@@ -4103,11 +4022,38 @@ body {
     z-index: 3;
 }
 
+.on-board-list2-mobile {
+    width: 230px;
+    height: 260px;
+    overflow: hidden;
+    left: 360px;
+    margin-top: 2565px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 19px;
+    position: absolute;
+    z-index: 3;
+}
+
 .characteristic-line {
     width: 1px;
     height: 195px;
     margin-top: 2865px;
     left: 684px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-line.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.characteristic-line-mobile {
+    width: 1px;
+    height: 195px;
+    margin-top: 2335px;
+    left: 384px;
     background-size: 100%;
     background-image: url('../images/characteristic-line.png');
     background-repeat: no-repeat;
@@ -4129,11 +4075,37 @@ body {
     z-index: 3;
 }
 
+.characteristic-item1-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2327px;
+    left: 380px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .characteristic-item2 {
     width: 9px;
     height: 13px;
     margin-top: 2912px;
     left: 680px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.characteristic-item2-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2382px;
+    left: 380px;
     background-size: 100%;
     background-image: url('../images/characteristic-item.png');
     background-repeat: no-repeat;
@@ -4155,11 +4127,37 @@ body {
     z-index: 3;
 }
 
+.characteristic-item3-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2410px;
+    left: 380px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .characteristic-item4 {
     width: 9px;
     height: 13px;
     margin-top: 2967px;
     left: 680px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.characteristic-item4-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2437px;
+    left: 380px;
     background-size: 100%;
     background-image: url('../images/characteristic-item.png');
     background-repeat: no-repeat;
@@ -4181,6 +4179,19 @@ body {
     z-index: 3;
 }
 
+.characteristic-item5-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2464px;
+    left: 380px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .characteristic-item6 {
     width: 9px;
     height: 13px;
@@ -4194,11 +4205,37 @@ body {
     z-index: 3;
 }
 
+.characteristic-item6-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2491px;
+    left: 380px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .characteristic-item7 {
     width: 9px;
     height: 13px;
     margin-top: 3048px;
     left: 680px;
+    background-size: 100%;
+    background-image: url('../images/characteristic-item.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.characteristic-item7-mobile {
+    width: 9px;
+    height: 13px;
+    margin-top: 2518px;
+    left: 380px;
     background-size: 100%;
     background-image: url('../images/characteristic-item.png');
     background-repeat: no-repeat;
@@ -4222,12 +4259,41 @@ body {
     z-index: 3;
 }
 
+.characteristic-mobile {
+    width: 240px;
+    height: 25px;
+    overflow: hidden;
+    left: 410px;
+    margin-top: 2320px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    z-index: 3;
+}
+
 .characteristic-list {
     width: 270px;
     height: 180px;
     overflow: hidden;
     left: 710px;
     margin-top: 2905px;
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 19px;
+    position: absolute;
+    z-index: 3;
+}
+
+.characteristic-list-mobile {
+    width: 270px;
+    height: 180px;
+    overflow: hidden;
+    left: 410px;
+    margin-top: 2375px;
     /* background-color: #aaaaaa; */
     text-align: left;
     color: black;
@@ -4251,9 +4317,19 @@ body {
     z-index: 3;
 }
 
-.br-price {
-    display: block;
-    margin: 7px 0;
+.rent-price-title-mobile {
+    width: 100%;
+    height: 55px;
+    margin-top: 2870px;
+    /* padding-left: 370px; */
+    /* background-color: #aaaaaa; */
+    text-align: left;
+    color: black;
+    font-size: 42px;
+    transform: scale(1, 1.1);
+    font-weight: 800;
+    position: absolute;
+    z-index: 3;
 }
 
 .rent-price-description {
@@ -4272,8 +4348,29 @@ body {
     z-index: 3;
 }
 
+.rent-price-description-mobile {
+    width: 100%;
+    height: 120px;
+    margin-top: 2970px;
+    /* padding-left: 370px; */
+    /* background-color: #aaaaaa; */
+    color: black;
+    font-size: 21px;
+    transform: scale(1, 1.1);
+    line-height: 120%;
+    text-align: left;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
 .price {
     font-weight: 800;
+}
+
+.offer {
+    height: 50px;
+    margin-top: 15px;
 }
 
 .contact {
@@ -4283,9 +4380,26 @@ body {
     position: absolute;
 }
 
+.contact-mobile {
+    width: 700px;
+    height: 260px;
+    margin-top: 3165px;
+    position: absolute;
+}
+
 .contact-bg {
     width: 980px;
     height: 186px;
+    overflow: hidden;
+    opacity: 0.6;
+    background-color: #031423;
+    position: absolute;
+    z-index: 2;
+}
+
+.contact-bg-mobile {
+    width: 700px;
+    height: 260px;
     overflow: hidden;
     opacity: 0.6;
     background-color: #031423;
@@ -4300,6 +4414,16 @@ body {
     padding: 30px;
     z-index: 3;
 }
+
+.contact-content-mobile {
+    width: 680px;
+    height: 260px;
+    margin-left: -20px;
+    position: absolute;
+    padding: 30px;
+    z-index: 3;
+}
+
 
 .contact-title {
     width: 100%;
@@ -4322,6 +4446,20 @@ body {
     position: absolute;
 }
 
+.contact-form-index-mobile {
+    width: 100%;
+    height: 100px;
+    margin-top: 70px;
+    position: absolute;
+}
+
+.contact-form-contact-mobile {
+    width: 100%;
+    height: 100px;
+    margin-left: -15px;
+    /* position: absolute; */
+}
+
 .contact-form-new {
     width: 980px;
     height: 100px;
@@ -4334,6 +4472,20 @@ body {
     height: 45px;
     font-size: 18px;
     background-color: #d40064;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    border: 0px;
+}
+
+.btn-contact-send-mobile {
+    width: 100%;
+    height: 55px;
+    font-size: 18px;
+    background-color: #d40064;
+    margin-top: 10px;
     font-weight: 600;
     letter-spacing: 1px;
     color: white;
@@ -4367,14 +4519,31 @@ body {
     margin-top: 100px;
 }
 
+#map-mobile {
+    width: 700px;
+    height: 291px;
+    background-image: url('../images/mapmobile.png');
+    background-repeat: no-repeat;
+    background-size: 700px 291px;
+    background-position: center top;
+    overflow-x: hidden;
+    margin-top: 270px;
+    /* display: block; */
+    position: absolute;
+}
+
 .site-index {
-    /* background-color: #ffffff; */
     z-index: 5;
     height: 2000px;
     width: 1010px;
     position: absolute;
-    /* color: black; */
-    /* padding-left: 20px; */
+}
+
+.site-index-mobile {
+    z-index: 5;
+    height: 2000px;
+    width: 700px;
+    position: absolute;
 }
 
 .site-blog {
@@ -4387,11 +4556,31 @@ body {
     padding-left: 0px;
 }
 
-.site-article {
+.site-blog-mobile {
     background-color: #ffffff;
     z-index: 20;
     height: 1500px;
+    width: 700px;
+    position: absolute;
+    color: black;
+    padding-left: 0px;
+}
+
+.site-article {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 870px;
     width: 980px;
+    position: absolute;
+    color: black;
+    padding-left: 0px;
+}
+
+.site-article-mobile {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 850px;
+    width: 700px;
     position: absolute;
     color: black;
     padding-left: 0px;
@@ -4407,6 +4596,89 @@ body {
     padding-left: 0px;
 }
 
+.site-contact-mobile {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 880px;
+    width: 700px;
+    position: absolute;
+    color: black;
+    padding-left: 0px;
+}
+
+.services {
+    width: 200px;
+    height: 300px;
+    margin-top: -55px;
+    margin-left: 350px;
+    color: white;
+    z-index: 21;
+    font-size: 19px;
+    position: absolute;
+}
+
+.services-mobile {
+    width: 200px;
+    height: 300px;
+    margin-top: -55px;
+    margin-left: 200px;
+    color: white;
+    z-index: 21;
+    font-size: 19px;
+    position: absolute;
+}
+
+.services-content {
+    display: none;
+    position: absolute;
+    opacity: 0.7;
+    color: white;
+    font-size: 18px;
+    background-color: #222222;
+    min-width: 180px;
+}
+
+.services-content a {
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.services:hover .services-content {
+    display: block;
+}
+
+.services-mobile:hover .services-content {
+    display: block;
+}
+
+.desktop-version {
+    width: 200px;
+    height: 45px;
+    /* left: 40%; */
+    color: white;
+    text-align: center;
+    position: absolute;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.mobile-version {
+    width: 200px;
+    height: 45px;
+    /* left: 40%; */
+    color: white;
+    text-align: center;
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    z-index: 20;
+}
+
 .blog-space {
     height: 30px;
 }
@@ -4418,6 +4690,13 @@ body {
 .blog-record {
     background-color: #f0f3f6;
     width: 980px;
+    height: 217px;
+    z-index: 2;
+}
+
+.blog-record-mobile {
+    background-color: #f0f3f6;
+    width: 700px;
     height: 217px;
     z-index: 2;
 }
@@ -4445,11 +4724,29 @@ body {
     position: absolute;
 }
 
+.blog-record-header-mobile {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-left: 245px;
+    margin-right: 120px;
+    padding-top: 20px;
+    position: absolute;
+}
+
 .blog-record-date {
     font-size: 18px;
     color: black;
     padding-top: 25px;
     margin-left: 865px;
+    position: absolute;
+}
+
+.blog-record-date-mobile {
+    font-size: 18px;
+    color: black;
+    padding-top: 25px;
+    margin-left: 600px;
     position: absolute;
 }
 
@@ -4460,7 +4757,16 @@ body {
     margin-left: 245px;
     margin-right: 25px;
     padding-bottom: 5px;
-    border-bottom: 1px solid black;
+    position: absolute;
+}
+
+.blog-record-text-mobile {
+    font-size: 16px;
+    color: black;
+    margin-top: 90px;
+    margin-left: 245px;
+    /* margin-right: 25px; */
+    padding-bottom: 5px;
     position: absolute;
 }
 
@@ -4559,6 +4865,10 @@ body {
     margin-left: 340px;
 }
 
+.pagination {
+    margin-left: 33%;
+}
+
 .blog-page {
     color: #db3c88;
     text-decoration: underline;
@@ -4615,14 +4925,27 @@ body {
     position: absolute;
 }
 
+.article-datetime-mobile {
+    color: #c2d1de;
+    font-size: 14px;
+    margin-left: 580px;
+    position: absolute;
+}
+
 .article-caption {
     font-size: 20px;
     color: black;
     font-weight: bold;
     position: absolute;
-    margin-top: 20px;
-    margin-left: 90px;
     margin-right: 200px;
+}
+
+.article-caption-mobile {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    margin-right: 125px;
 }
 
 .article-photo {
@@ -4631,6 +4954,16 @@ body {
     background-image: url('../images/articlephoto.png');
     background-repeat: no-repeat;
     background-size: 980px 419px;
+    margin-top: 80px;
+    position: absolute;
+}
+
+.article-photo-mobile {
+    width: 700px;
+    height: 299px;
+    background-image: url('../images/articlephotomobile.png');
+    background-repeat: no-repeat;
+    background-size: 700px 299px;
     margin-top: 100px;
     position: absolute;
 }
@@ -4638,7 +4971,14 @@ body {
 .article-text {
     color: black;
     font-size: 14px;
-    margin-top: 540px;
+    margin-top: 520px;
+    position: absolute;
+}
+
+.article-text-mobile {
+    color: black;
+    font-size: 14px;
+    margin-top: 420px;
     position: absolute;
 }
 
@@ -4654,11 +4994,21 @@ body {
 
 .quote-border {
     width: 3px;
-    height: 63px;
+    height: 60px;
     margin-left: 50px;
     background-image: url('../images/quoteborder.png');
     background-repeat: no-repeat;
-    background-size: 3px 63px;
+    background-size: 3px 60px;
+    position: absolute;
+}
+
+.quote-border-mobile {
+    width: 3px;
+    height: 80px;
+    margin-left: 50px;
+    background-image: url('../images/quoteborder.png');
+    background-repeat: no-repeat;
+    background-size: 3px 80px;
     position: absolute;
 }
 
@@ -4865,6 +5215,15 @@ body {
 .footer-blog {
     width: 100%;
     height: 686px;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.footer-article {
+    width: 100%;
+    height: 500px;
     position: absolute;
     width: 100%;
     overflow: hidden;
