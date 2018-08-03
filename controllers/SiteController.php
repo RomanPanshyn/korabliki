@@ -103,6 +103,7 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+        $modelBook = new Book();
         $model = new Contact();
         // if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
         //     Yii::$app->session->setFlash('contactFormSubmitted');
@@ -111,11 +112,13 @@ class SiteController extends Controller
         // }
         return $this->render('contact', [
             'model' => $model,
+            'modelBook' => $modelBook,
         ]);
     }
 
     public function actionContactmobile()
     {
+        $modelBook = new Book();
         $model = new Contact();
         // if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
         //     Yii::$app->session->setFlash('contactFormSubmitted');
@@ -124,6 +127,7 @@ class SiteController extends Controller
         // }
         return $this->render('contactmobile', [
             'model' => $model,
+            'modelBook' => $modelBook,
         ]);
     }
 
@@ -134,29 +138,39 @@ class SiteController extends Controller
      */
     public function actionBlog()
     {
+        $modelBook = new Book();
         $searchModel = new BlogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('blog', [
             'dataProvider' => $dataProvider,
+            'modelBook' => $modelBook,
         ]);
     }
 
     public function actionBlogmobile()
     {
+        $modelBook = new Book();
         $searchModel = new BlogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('blogmobile', [
             'dataProvider' => $dataProvider,
+            'modelBook' => $modelBook,
         ]);
     }
 
     public function actionArticle()
     {
-        return $this->render('article');
+        $modelBook = new Book();
+        return $this->render('article', [
+            'modelBook' => $modelBook,
+        ]);
     }
 
     public function actionArticlemobile()
     {
-        return $this->render('articlemobile');
+        $modelBook = new Book();
+        return $this->render('articlemobile', [
+            'modelBook' => $modelBook,
+        ]);
     }
 }

@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="layout-article">
     <div class="head-bg"></div>
     <div class="header-image-blog"></div>
-    <div class="wrap-blog">
+    <div class="wrap">
         <?php
         NavBar::begin([
             'brandLabel' => '<div class="logo">ПАНСЬКА<br>ВТІХА</div>',
@@ -43,8 +43,24 @@ AppAsset::register($this);
             'margin-top' => '20px']],
             'items' => [
                 ['label' => 'ЗАКАЗАТЬ',
-                    // 'url' => ['/site/index'], 
-                    'options' => ['style' => [
+                    // 'url' => ['/site/index'],
+                    'options' => [
+                    'class' => 'menu-order',
+                    'style' => [
+                    'background-color' => '#996655',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => '|', 'options' => ['style' => [
+                    'margin-left' => '-10px',
+                    'margin-right' => '-10px',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => 'УСЛУГИ',
+                    // 'url' => ['/site/index'],
+                    'options' => [                    
+                    'class' => 'menu-services',
+                    'style' => [
+                    'background-color' => '#FFFC77',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -53,6 +69,7 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => 'БЛОГ', 'url' => ['/site/blog'], 'options' => ['style' => [
+                    'background-color' => '#0E5D72',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -61,6 +78,7 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => 'КОНТАКТЫ', 'url' => ['/site/contact'], 'options' => ['style' => [
+                    'background-color' => '#704B6F',
                     'font-size' => '19px',
                     ]]],
             ],
@@ -68,14 +86,12 @@ AppAsset::register($this);
         NavBar::end();
         ?>
 
-        <div class="container-blog">
-            <div class="container">
-                <?= Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ]) ?>
-                <?= Alert::widget() ?>
-                <?= $content ?>
-            </div>
+        <div class="container">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+            <?= Alert::widget() ?>
+            <?= $content ?>
         </div>
     </div>
 </div>

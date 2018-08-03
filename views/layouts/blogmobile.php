@@ -34,16 +34,37 @@ AppAsset::register($this);
             'brandLabel' => '<div class="logo">ПАНСЬКА<br>ВТІХА</div>',
             'brandUrl' => ['/site/indexmobile'],
             'options' => [
-                'class' => 'navbar-inverse navbar-fixed-top navbar-mobile head-line',
-            ],
+                'class' => 'navbar-inverse navbar-fixed-top head-line',
+                'style' => [
+                'width' => '730px',
+                'margin' => 'auto',
+            ]],
         ]);
         echo Nav::widget([
-            'options' => ['class' => 'navbar-nav navbar-right navbar-mobile navigation-links', 'style' => [
-            'margin-top' => '20px']],
+            'options' => ['class' => 'navbar-nav navbar-right navigation-links', 'style' => [
+            'margin-top' => '20px',
+            'width' => '780px;',
+            ]],
             'items' => [
                 ['label' => 'ЗАКАЗАТЬ',
-                    // 'url' => ['/site/indexmobile'], 
-                    'options' => ['style' => [
+                    // 'url' => ['/site/index'],
+                    'options' => [
+                    'class' => 'menu-order',
+                    'style' => [
+                    'background-color' => '#996655',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => '|', 'options' => ['style' => [
+                    'margin-left' => '-10px',
+                    'margin-right' => '-10px',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => 'УСЛУГИ',
+                    // 'url' => ['/site/index'],
+                    'options' => [
+                    'class' => 'menu-services',
+                    'style' => [
+                    'background-color' => '#FFFC77',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -52,6 +73,7 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => 'БЛОГ', 'url' => ['/site/blogmobile'], 'options' => ['style' => [
+                    'background-color' => '#0E5D72',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -60,6 +82,7 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => 'КОНТАКТЫ', 'url' => ['/site/contactmobile'], 'options' => ['style' => [
+                    'background-color' => '#704B6F',
                     'font-size' => '19px',
                     ]]],
             ],
@@ -67,7 +90,7 @@ AppAsset::register($this);
         NavBar::end();
         ?>
 
-        <div class="container-mobile">
+        <div class="container-mobile">            
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
                 'options' => ['class' => 'breadcrumb'],

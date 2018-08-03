@@ -34,56 +34,75 @@ AppAsset::register($this);
             'brandLabel' => '<div class="logo">ПАНСЬКА<br>ВТІХА</div>',
             'brandUrl' => ['/site/indexmobile'],
             'options' => [
-                'class' => 'navbar-inverse navbar-fixed-top navbar-mobile head-line',
-            ],
+                'class' => 'navbar-inverse navbar-fixed-top head-line',
+                'style' => [
+                'width' => '750px',
+                'margin' => 'auto',
+            ]],
         ]);
         echo Nav::widget([
-            'options' => ['class' => 'navbar-nav navbar-right navbar-mobile navigation-links', 'style' => [
-            'margin-top' => '20px']],
+            'options' => ['class' => 'navbar-nav navbar-right navigation-links', 'style' => [
+            'margin-top' => '20px',
+            'width' => '840px;',
+            ]],
             'items' => [
-                ['label' => 'ЗАКАЗАТЬ',
-                    // 'url' => ['/site/indexmobile'],
-                    'options' => ['style' => [
-                    'font-size' => '19px',
+                    ['label' => '<div class="desktop-icon"></div>',
+                        'url' => ['/site/index'],
+                        'options' => ['style' => [
+                        'background-color' => 'green',
+                        'font-size' => '19px',
+                        'margin-top' => '-5px',
                     ]]],
-                ['label' => '|', 'options' => ['style' => [
-                    'margin-left' => '-10px',
-                    'margin-right' => '-10px',
-                    'font-size' => '19px',
-                    ]]],
-                ['label' => 'БЛОГ', 'url' => ['/site/blogmobile'], 'options' => ['style' => [
-                    'font-size' => '19px',
-                    ]]],
-                ['label' => '|', 'options' => ['style' => [
-                    'margin-left' => '-10px',
-                    'margin-right' => '-10px',
-                    'font-size' => '19px',
-                    ]]],
-                ['label' => 'КОНТАКТЫ', 'url' => ['/site/contactmobile'], 'options' => ['style' => [
-                    'font-size' => '19px',
-                    ]]],
+                    ['label' => '|', 'options' => ['style' => [
+                        'margin-left' => '-10px',
+                        'margin-right' => '-10px',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => 'ЗАКАЗАТЬ',
+                        // 'url' => ['/site/index'],
+                        'options' => [
+                        'class' => 'menu-order',
+                        'style' => [
+                        'background-color' => '#996655',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '|', 'options' => ['style' => [
+                        'margin-left' => '-10px',
+                        'margin-right' => '-10px',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => 'УСЛУГИ',
+                        // 'url' => ['/site/index'],
+                        'options' => [
+                        'class' => 'menu-services',
+                        'style' => [
+                        'background-color' => '#FFFC77',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '|', 'options' => ['style' => [
+                        'margin-left' => '-10px',
+                        'margin-right' => '-10px',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => 'БЛОГ', 'url' => ['/site/blogmobile'], 'options' => ['style' => [
+                        'background-color' => '#0E5D72',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '|', 'options' => ['style' => [
+                        'margin-left' => '-10px',
+                        'margin-right' => '-10px',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => 'КОНТАКТЫ', 'url' => ['/site/contactmobile'], 'options' => ['style' => [
+                        'background-color' => '#704B6F',
+                        'font-size' => '19px',
+                        ]]],
             ],
+            'encodeLabels' => false,
         ]);
         NavBar::end();
         ?>
-        <div class="container-mobile">
-            <div class = "desktop-version">
-                <?= Html::a('Полная версия', ['/site/index'],
-                ['class' => 'btn btn-lg btn-success',
-                 'style' => ['padding' => '10px 10px', 'font-size' => '15px']]) ?>
-            </div>
-            <div class="services-mobile">
-                УСЛУГИ
-                <div class="services-content">
-                    <a href="#">Турне</a>
-                    <a href="#">Вечеринка</a>
-                    <a href="#">День Рождения</a>
-                    <a href="#">Корпоратив</a>
-                    <a href="#">Свадьба</a>
-                    <a href="#">Прогулка по Днепру</a>
-                    <a href="#">Прогулка по Десне</a>
-                 </div>
-             </div>
+        <div class="container-mobile">            
             <div class="more-photo-mobile">
                 БОЛЬШЕ ФОТО
             </div>

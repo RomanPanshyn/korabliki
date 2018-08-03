@@ -114,9 +114,36 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-right navigation-links', 'style' => [
             'margin-top' => '20px']],
             'items' => [
+                ['label' => 'МОБИЛЬНАЯ ВЕРСИЯ',
+                    'url' => ['/site/indexmobile'],
+                    'options' => ['style' => [
+                    'background-color' => 'green',
+                    'font-size' => '19px',
+                ]]],
+                ['label' => '|', 'options' => ['style' => [
+                    'margin-left' => '-10px',
+                    'margin-right' => '-10px',
+                    'font-size' => '19px',
+                    ]]],
                 ['label' => 'ЗАКАЗАТЬ',
                     // 'url' => ['/site/index'],
-                    'options' => ['style' => [
+                    'options' => [
+                    'class' => 'menu-order',
+                    'style' => [
+                    'background-color' => '#996655',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => '|', 'options' => ['style' => [
+                    'margin-left' => '-10px',
+                    'margin-right' => '-10px',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => 'УСЛУГИ',
+                    // 'url' => ['/site/index'],
+                    'options' => [
+                    'class' => 'menu-services',    
+                    'style' => [
+                    'background-color' => '#FFFC77',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -125,6 +152,7 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => 'БЛОГ', 'url' => ['/site/blog'], 'options' => ['style' => [
+                    'background-color' => '#0E5D72',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -133,32 +161,15 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => 'КОНТАКТЫ', 'url' => ['/site/contact'], 'options' => ['style' => [
+                    'background-color' => '#704B6F',
                     'font-size' => '19px',
                     ]]],
             ],
-            'encodeLabels' => false,
         ]);
         NavBar::end();
         ?>
 
         <div class="container">
-            <div class = "mobile-version">
-                <?= Html::a('Мобильная версия', ['/site/indexmobile'],
-                ['class' => 'btn btn-lg btn-success',
-                 'style' => ['padding' => '10px 10px', 'font-size' => '15px']]) ?>
-            </div>
-            <div class="services">
-                УСЛУГИ
-                <div class="services-content">
-                    <a href="#">Турне</a>
-                    <a href="#">Вечеринка</a>
-                    <a href="#">День Рождения</a>
-                    <a href="#">Корпоратив</a>
-                    <a href="#">Свадьба</a>
-                    <a href="#">Прогулка по Днепру</a>
-                    <a href="#">Прогулка по Десне</a>
-                 </div>
-             </div>
             <div class="more-photo">
                 БОЛЬШЕ ФОТО
             </div>

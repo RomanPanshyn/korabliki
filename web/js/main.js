@@ -1,12 +1,46 @@
 $(document).ready(function(){
 
+    $(".menu-services").click(function(){
+        if ($(".services").css("display") == "none")
+            $(".services").css("display", "block");
+        else
+            $(".services").css("display", "none");
+
+        if ($(".services-mobile").css("display") == "none")
+            $(".services-mobile").css("display", "block");
+        else
+            $(".services-mobile").css("display", "none");
+
+        if ($(".services-mobile-blog").css("display") == "none")
+            $(".services-mobile-blog").css("display", "block");
+        else
+            $(".services-mobile-blog").css("display", "none");
+    });
+
+    $(".services-close-icon").click(function(){
+        $(".services").css("display", "none");
+        $(".services-mobile").css("display", "none");
+        $(".services-mobile-blog").css("display", "none");
+    });
+
+    $(".menu-order").click(function(){
+        if ($(".order").css("display") == "none")
+            $(".order").css("display", "block");
+        else
+            $(".order").css("display", "none");
+    });
+
+    $(".order-close-icon").click(function(){
+        $(".order").css("display", "none");
+    });
+
     function galleryVisibility(display)
     {
         $("#gallery-bg").css("display", display);
         $("#gallery-bg-mobile").css("display", display);
         $(".gallery-window-bg").css("display", display);
         $(".gallery-window-bg-mobile").css("display", display);
-        $(".gallery-close-icon").css("display", display);        
+        $(".gallery-close-icon").css("display", display);
         $(".gallery-close-icon-mobile").css("display", display);
         $(".gallery-photo").css("display", display);
         $(".gallery-photo-mobile").css("display", display);
