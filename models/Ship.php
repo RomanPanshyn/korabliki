@@ -5,21 +5,19 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "contact".
+ * This is the model class for table "ship".
  *
  * @property int $id
  * @property string $name
- * @property string $phone
- * @property string $email
  */
-class Contact extends \yii\db\ActiveRecord
+class Ship extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'contact';
+        return 'ship';
     }
 
     /**
@@ -28,9 +26,10 @@ class Contact extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone'], 'required'],
-            [['email'], 'string', 'max' => 70],
-            [['name', 'phone'], 'string', 'max' => 100],
+            [['id', 'name'], 'required'],
+            [['id'], 'integer'],
+            [['name'], 'string', 'max' => 100],
+            [['id'], 'unique'],
         ];
     }
 
@@ -41,9 +40,7 @@ class Contact extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Имя',
-            'phone' => 'Телефон',
-            'email' => 'E-mail',
+            'name' => 'Название',
         ];
     }
 }

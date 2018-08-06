@@ -64,7 +64,7 @@ AppAsset::register($this);
                     'options' => [
                     'class' => 'menu-services',
                     'style' => [
-                    'background-color' => '#FFFC77',
+                    'background-color' => '#FFD400',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [

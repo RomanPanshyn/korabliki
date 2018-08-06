@@ -5,21 +5,20 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "contact".
+ * This is the model class for table "pagination".
  *
  * @property int $id
  * @property string $name
- * @property string $phone
- * @property string $email
+ * @property int $pagesize
  */
-class Contact extends \yii\db\ActiveRecord
+class Pagination2 extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'contact';
+        return 'pagination';
     }
 
     /**
@@ -28,9 +27,10 @@ class Contact extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'phone'], 'required'],
-            [['email'], 'string', 'max' => 70],
-            [['name', 'phone'], 'string', 'max' => 100],
+            [['id', 'name', 'pagesize'], 'required'],
+            [['id', 'pagesize'], 'integer'],
+            [['name'], 'string', 'max' => 100],
+            [['id'], 'unique'],
         ];
     }
 
@@ -41,9 +41,8 @@ class Contact extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Имя',
-            'phone' => 'Телефон',
-            'email' => 'E-mail',
+            'name' => 'Name',
+            'pagesize' => 'Количество строк',
         ];
     }
 }

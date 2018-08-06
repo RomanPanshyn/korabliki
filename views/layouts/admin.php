@@ -26,32 +26,38 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-<div class="layout-article-mobile">
+<div class="layout-container-admin">
     <div class="head-bg"></div>
-    <div class="wrap-mobile">
+    <div class="wrap">
         <?php
         NavBar::begin([
             'brandLabel' => '<div class="logo">ПАНСЬКА<br>ВТІХА</div>',
-            'brandUrl' => ['/site/indexmobile'],
+            'brandUrl' => ['/site/admin'],
             'options' => [
                 'class' => 'navbar-inverse navbar-fixed-top head-line',
-                'style' => [
-                'width' => '730px',
-                'margin' => 'auto',
-            ]],
+            ],
         ]);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav navbar-right navigation-links', 'style' => [
-            'margin-top' => '20px',
-            'width' => '780px;',
-            ]],
+            'margin-top' => '20px']],
             'items' => [
-                ['label' => 'ЗАКАЗАТЬ',
+                ['label' => 'ЗАКАЗЫ И КОНТАКТЫ',
+                    'url' => ['/site/admin'],
+                    'options' => ['style' => [
+                    'background-color' => '#996655',
+                    'font-size' => '19px',
+                ]]],
+                ['label' => '|', 'options' => ['style' => [
+                    'margin-left' => '-10px',
+                    'margin-right' => '-10px',
+                    'font-size' => '19px',
+                    ]]],
+                ['label' => 'БЛОГ',
                     // 'url' => ['/site/index'],
                     'options' => [
-                    'class' => 'menu-order',
+                    // 'class' => 'menu-order',
                     'style' => [
-                    'background-color' => '#996655',
+                    'background-color' => '#0E5D72',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -62,38 +68,36 @@ AppAsset::register($this);
                 ['label' => 'УСЛУГИ',
                     // 'url' => ['/site/index'],
                     'options' => [
-                    'class' => 'menu-services',
+                    // 'class' => 'menu-services',
                     'style' => [
                     'background-color' => '#FFD400',
                     'font-size' => '19px',
                     ]]],
-                ['label' => '|', 'options' => ['style' => [
+                 ['label' => '|', 'options' => ['style' => [
                     'margin-left' => '-10px',
                     'margin-right' => '-10px',
                     'font-size' => '19px',
                     ]]],
-                ['label' => 'БЛОГ', 'url' => ['/site/blogmobile'], 'options' => ['style' => [
-                    'background-color' => '#0E5D72',
-                    'font-size' => '19px',
-                    ]]],
-                ['label' => '|', 'options' => ['style' => [
-                    'margin-left' => '-10px',
-                    'margin-right' => '-10px',
-                    'font-size' => '19px',
-                    ]]],
-                ['label' => 'КОНТАКТЫ', 'url' => ['/site/contactmobile'], 'options' => ['style' => [
-                    'background-color' => '#704B6F',
-                    'font-size' => '19px',
-                    ]]],
+                '<li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton('ВЫЙТИ',
+                        ['class' => 'btn btn-link logout',
+                        'style' => [
+                        'background-color' => '#AA5577',
+                        'font-size' => '19px',
+                    ]]
+                    )
+                . Html::endForm()
+                . '</li>'
+
             ],
         ]);
         NavBar::end();
         ?>
 
-        <div class="container-mobile">
+        <div class="container-admin">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                'options' => ['class' => 'breadcrumb'],
             ]) ?>
             <?= Alert::widget() ?>
             <?= $content ?>
@@ -101,9 +105,9 @@ AppAsset::register($this);
     </div>
 </div>
 
-<footer class="footer-article">
+<footer class="footer">
     <div class="footer-bg">
-        <div class="container-mobile">
+        <div class="container-admin">
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 logo-bottom">
                 ПАНСЬКА<br>ВТІХА
             </div>
@@ -118,7 +122,6 @@ AppAsset::register($this);
             </div>
         </div>
     </div>
-
 </footer>
 
 <?php $this->endBody() ?>

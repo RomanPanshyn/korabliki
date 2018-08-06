@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    $(".bookpagination").change(function(){
+        $(".bookpagesizerefresh").click();
+    });
+
+    $(".contactpagination").change(function(){
+        $(".contactpagesizerefresh").click();
+    });
+
     $(".menu-services").click(function(){
         if ($(".services").css("display") == "none")
             $(".services").css("display", "block");

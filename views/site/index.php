@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 use kartik\datetime\DateTimePicker;
 use yii\bootstrap\Dropdown;
 
@@ -11,13 +12,12 @@ $this->title = 'ПАНСЬКА ВТІХА';
 
      <div class="services">
          <div class="services-close-icon"></div>
-         <a href="#">Турне</a>
-         <a href="#">Вечеринка</a>
-         <a href="#">День Рождения</a>
-         <a href="#">Корпоратив</a>
-         <a href="#">Свадьба</a>
-         <a href="#">Прогулка по Днепру</a>
-         <a href="#">Прогулка по Десне</a>
+         <?php
+         $serviceList =ArrayHelper::map($service, 'id', 'name');
+         for ($i = 1; $i <= count($serviceList); $i++) {
+             echo '<a href="#">'.$serviceList[$i].'</a>';
+         }
+          ?>
      </div>
 
      <div class="order">
@@ -26,22 +26,21 @@ $this->title = 'ПАНСЬКА ВТІХА';
             <?php $form = ActiveForm::begin(); ?>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 application-form-mobile">
-                    <?= $form->field($modelBook, 'ship')->dropdownList(['Cuba Libre'], ['prompt'=>'Выбрать теплоход',
+                    <?= $form->field($modelBook, 'ship')->dropdownList(ArrayHelper::map($ship, 'name', 'name'), ['prompt'=>'Выбрать теплоход',
                     'class' => 'application-form-input-mobile'])->label(false) ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 application-form-mobile">
-                    <?= $form->field($modelBook, 'event')
-                    ->dropdownList(['Турне','Вечеринка','День Рождения','Корпоратив','Свадьба','Прогулка'], ['prompt'=>'Мероприятие',
+                    <?= $form->field($modelBook, 'event')->dropdownList(ArrayHelper::map($event, 'name', 'name'), ['prompt'=>'Мероприятие',
                     'class' => 'application-form-input-mobile'])->label(false) ?>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 application-form-mobile">
-                    <?= $form->field($modelBook, 'route')->dropdownList(['Днепр','Десна'], ['prompt'=>'Маршрут',
+                    <?= $form->field($modelBook, 'route')->dropdownList(ArrayHelper::map($route, 'name', 'name'), ['prompt'=>'Маршрут',
                     'class' => 'application-form-input-mobile'])->label(false) ?>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 application-form-mobile">
-                    <?= $form->field($modelBook, 'guests')->dropdownList(['5','10','15','20'], ['prompt'=>'Количество гостей',
+                    <?= $form->field($modelBook, 'guests')->dropdownList(ArrayHelper::map($guests, 'name', 'name'), ['prompt'=>'Количество гостей',
                     'class' => 'application-form-input-mobile'])->label(false) ?>
                 </div>
             </div>
@@ -97,7 +96,8 @@ $this->title = 'ПАНСЬКА ВТІХА';
             </div>
             <?php ActiveForm::end(); ?>
         </div>
-    </div>
+     </div>
+
 
 
     <div class="application">
@@ -115,19 +115,19 @@ $this->title = 'ПАНСЬКА ВТІХА';
             <?php $form = ActiveForm::begin(); ?>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($modelBook, 'ship')->dropdownList(['Cuba Libre'], ['prompt'=>'Выбрать теплоход',
+                    <?= $form->field($modelBook1, 'ship')->dropdownList(ArrayHelper::map($ship, 'name', 'name'), ['prompt'=>'Выбрать теплоход',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($modelBook, 'event')
-                    ->dropdownList(['Турне','Вечеринка','День Рождения','Корпоратив','Свадьба','Прогулка'], ['prompt'=>'Мероприятие',
+                    <?= $form->field($modelBook1, 'event')
+                    ->dropdownList(ArrayHelper::map($event, 'name', 'name'), ['prompt'=>'Мероприятие',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 label-date application-form">
                     с
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 application-form">
-                    <?= $form->field($modelBook, 'datefrom')->label(false)->widget(DateTimePicker::className(), [
+                    <?= $form->field($modelBook1, 'datefrom')->label(false)->widget(DateTimePicker::className(), [
                         'name' => 'datetime_10',
                         'id' => 'datetimepicker1',
                         'options' => ['placeholder' => '__/__/____ __:__', 'class' => 'application-form-input'],
@@ -142,18 +142,18 @@ $this->title = 'ПАНСЬКА ВТІХА';
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($modelBook, 'route')->dropdownList(['Днепр','Десна'], ['prompt'=>'Маршрут',
+                    <?= $form->field($modelBook1, 'route')->dropdownList(ArrayHelper::map($route, 'name', 'name'), ['prompt'=>'Маршрут',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($modelBook, 'guests')->dropdownList(['5','10','15','20'], ['prompt'=>'Количество гостей',
+                    <?= $form->field($modelBook1, 'guests')->dropdownList(ArrayHelper::map($guests, 'name', 'name'), ['prompt'=>'Количество гостей',
                     'class' => 'application-form-input'])->label(false) ?>
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 label-date application-form">
                     до
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 application-form">
-                    <?= $form->field($modelBook, 'dateto')->label(false)->widget(DateTimePicker::className(), [
+                    <?= $form->field($modelBook1, 'dateto')->label(false)->widget(DateTimePicker::className(), [
                         'name' => 'datetime_10',
                         'id' => 'datetimepicker2',
                         'options' => ['placeholder' => '__/__/____ __:__', 'class' => 'application-form-input'],
@@ -168,11 +168,11 @@ $this->title = 'ПАНСЬКА ВТІХА';
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($modelBook, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
+                    <?= $form->field($modelBook1, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
                     ->label(false) ?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($modelBook, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
+                    <?= $form->field($modelBook1, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
                         'mask' => '+38 (999) 999-99-99'])
                         ->textInput(['placeholder'=>'+38 (___) ___-__-__', 'class' => 'application-form-input']) ?>
                 </div>
@@ -337,11 +337,11 @@ $this->title = 'ПАНСЬКА ВТІХА';
             <div class="contact-form">
                 <?php $form = ActiveForm::begin(); ?>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($model, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
+                    <?= $form->field($modelContact, 'name')->textInput(['placeholder'=>'Имя', 'class' => 'application-form-input'])
                     ->label(false) ?>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 application-form">
-                    <?= $form->field($model, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
+                    <?= $form->field($modelContact, 'phone')->label(false)->widget(\yii\widgets\MaskedInput::className(), [
                         'mask' => '+38 (999) 999-99-99'])
                         ->textInput(['placeholder'=>'+38 (___) ___-__-__', 'class' => 'application-form-input']) ?>
                 </div>

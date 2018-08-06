@@ -60,7 +60,7 @@ AppAsset::register($this);
                     'options' => [
                     'class' => 'menu-services',
                     'style' => [
-                    'background-color' => '#FFFC77',
+                    'background-color' => '#FFD400',
                     'font-size' => '19px',
                     ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -86,7 +86,7 @@ AppAsset::register($this);
         NavBar::end();
         ?>
 
-        <div class="container">            
+        <div class="container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
