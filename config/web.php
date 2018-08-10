@@ -14,6 +14,10 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
+        'telegram' => [
+            'class' => 'aki\telegram\Telegram',
+            'botToken' => '660977994:AAFDk_P7rorj7Lcj51vI-quoJAZsTHqk6ao',
+        ],
         'request' => [
             //'baseUrl' => '',
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

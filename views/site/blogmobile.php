@@ -15,7 +15,9 @@ $this->params['breadcrumbs'][] = ['label' => 'Главная (моб)', 'url' =>
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-blog-mobile">
-
+    <div class="message-blog">
+        <?= $message ?>
+    </div>
     <div class="services-mobile-blog">
         <div class="services-close-icon"></div>
         <?php

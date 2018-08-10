@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->context->layout = 'admin';
 $this->title = 'Редактировать заказ ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Админка', 'url' => ['admin']];
+$this->params['breadcrumbs'][] = ['label' => 'Заказы и контакты (админка)', 'url' => ['admin']];
 $this->params['breadcrumbs'][] = ['label' => 'Заказ '.$model->id, 'url' => ['viewbook', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Редактировать';
 ?>

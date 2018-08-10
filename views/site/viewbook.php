@@ -8,7 +8,7 @@ use yii\widgets\DetailView;
 
 $this->context->layout = 'admin';
 $this->title = 'Заказ '.$model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Админка', 'url' => ['admin']];
+$this->params['breadcrumbs'][] = ['label' => 'Заказы и контакты (админка)', 'url' => ['admin']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="view-book">

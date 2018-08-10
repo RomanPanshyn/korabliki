@@ -10,7 +10,9 @@ $this->context->layout = 'mainmobile';
 $this->title = 'ПАНСЬКА ВТІХА';
 ?>
 <div class="site-index-mobile">
-
+    <div class="message-index-mobile">
+        <?= $message ?>
+    </div>
     <div class="services-mobile">
         <div class="services-close-icon"></div>
         <?php

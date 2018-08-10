@@ -19,7 +19,7 @@ body {
 }
 
 .layout-contact {
-    height: 280px;
+    height: 300px;
 }
 
 .layout-contact-mobile {
@@ -88,7 +88,47 @@ body {
     padding: 0px 50px;
 }
 
+.message-index {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.message-index-mobile {
+    text-align: center;
+    font-size: 22px;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.message-blog {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    margin-top: -20px;
+}
+
+.message-contact {
+    text-align: center;
+    font-size: 22px;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    margin-top: -20px;
+}
+
 .book-create {
+    padding: 0px 50px;
+}
+
+.blog-create {
     padding: 0px 50px;
 }
 
@@ -100,11 +140,19 @@ body {
     padding: 0px 50px;
 }
 
+.view-blog {
+    padding: 0px 50px;
+}
+
 .view-contact {
     padding: 0px 50px;
 }
 
 .update-book {
+    padding: 0px 50px;
+}
+
+.update-blog {
     padding: 0px 50px;
 }
 
@@ -130,6 +178,10 @@ body {
 }
 
 .contactpagination {
+    font-size: 16px;
+}
+
+.blogpagination {
     font-size: 16px;
 }
 
@@ -214,8 +266,17 @@ body {
     z-index: 6;
 }
 
+.menu-labels {
+    color: white;
+}
+
 .navigation-links {
     z-index: 6;
+}
+
+.contact-block {
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .contact-info {
@@ -4585,6 +4646,13 @@ body {
     position: absolute;
 }
 
+.site-admin-blog {
+    z-index: 5;
+    height: 2000px;
+    width: 100%;
+    position: absolute;
+}
+
 .site-index-mobile {
     z-index: 5;
     height: 2000px;
@@ -4635,7 +4703,7 @@ body {
 .site-contact {
     background-color: #ffffff;
     z-index: 20;
-    height: 700px;
+    height: 720px;
     width: 980px;
     position: absolute;
     color: black;
@@ -5039,6 +5107,7 @@ body {
     font-weight: bold;
     position: absolute;
     margin-right: 200px;
+    margin-top: 20px;
 }
 
 .article-caption-mobile {
@@ -5047,6 +5116,7 @@ body {
     font-weight: bold;
     position: absolute;
     margin-right: 125px;
+    margin-top: 20px;
 }
 
 .article-photo {
@@ -5055,7 +5125,7 @@ body {
     background-image: url('../images/articlephoto.png');
     background-repeat: no-repeat;
     background-size: 980px 419px;
-    margin-top: 80px;
+    margin-top: 90px;
     position: absolute;
 }
 
@@ -5067,6 +5137,7 @@ body {
     background-size: 700px 299px;
     margin-top: 100px;
     position: absolute;
+    margin-top: 110px;
 }
 
 .article-text {

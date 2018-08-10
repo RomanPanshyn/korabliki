@@ -8,6 +8,10 @@ $(document).ready(function(){
         $(".contactpagesizerefresh").click();
     });
 
+    $(".blogpagination").change(function(){
+        $(".blogpagesizerefresh").click();
+    });    
+
     $(".menu-services").click(function(){
         if ($(".services").css("display") == "none")
             $(".services").css("display", "block");

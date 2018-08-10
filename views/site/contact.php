@@ -15,7 +15,9 @@ $this->title = 'Контакты';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
-
+    <div class="message-blog">
+        <?= $message ?>
+    </div>
     <div class="services">
         <div class="services-close-icon"></div>
         <?php
@@ -104,17 +106,18 @@ $this->params['breadcrumbs'][] = $this->title;
        </div>
     </div>
 
-    <div class="contact-info">
-        <?= Html::img('@web/images/locationiconred.png', ['alt' => 'location',
-            'style' => ['width' => '22px', 'margin-bottom' => '10px']]) ?>
-        МЕСТО СТОЯНКИ <span class="contact-bold">ЯХТ-КЛУБ "ФРЕГАТ"</span>
+    <div class="contact-block">
+        <div class="contact-info">
+            <?= Html::img('@web/images/locationiconred.png', ['alt' => 'location',
+                'style' => ['width' => '22px', 'margin-bottom' => '10px']]) ?>
+            МЕСТО СТОЯНКИ <span class="contact-bold">ЯХТ-КЛУБ "ФРЕГАТ"</span>
+        </div>
+        <div class="contact-info">
+            <?= Html::img('@web/images/phoneiconred.png', ['alt' => 'phone',
+                'style' => ['width' => '22px']]) ?>
+            +38 <span class="contact-bold">(063) 495 06 22</span>
+        </div>
     </div>
-    <div class="contact-info">
-        <?= Html::img('@web/images/phoneiconred.png', ['alt' => 'phone',
-            'style' => ['width' => '22px']]) ?>
-        +38 <span class="contact-bold">(063) 495 06 22</span>
-    </div>
-    <br><br>
     <div class="contact-text">Оставьте заявку и мы вам перезвоним:</div>
     <div class="contact-form-new">
         <?php $form = ActiveForm::begin(); ?>

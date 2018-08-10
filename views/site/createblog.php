@@ -2,20 +2,21 @@
 
 use yii\helpers\Html;
 
+
 /* @var $this yii\web\View */
 /* @var $model app\models\Content */
 
 $this->context->layout = 'admin';
-$this->title = 'Редактировать контакт ' . $model->id;
+$this->title = 'Создать статью';
 $this->params['breadcrumbs'][] = ['label' => 'Заказы и контакты (админка)', 'url' => ['admin']];
-$this->params['breadcrumbs'][] = ['label' => 'Контакт '.$model->id, 'url' => ['viewcontact', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Редактировать';
+$this->params['breadcrumbs'][] = ['label' => 'Блог (админка)', 'url' => ['adminblog']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="update-contact">
+<div class="blog-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?= $this->render('_form_contact', [
+    <?= $this->render('_form_blog', [
         'model' => $model,
     ]) ?>
 

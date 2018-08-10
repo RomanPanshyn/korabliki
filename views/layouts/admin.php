@@ -41,10 +41,10 @@ AppAsset::register($this);
             'options' => ['class' => 'navbar-nav navbar-right navigation-links', 'style' => [
             'margin-top' => '20px']],
             'items' => [
-                ['label' => 'ЗАКАЗЫ И КОНТАКТЫ',
+                ['label' => '<div class="menu-labels">ЗАКАЗЫ И КОНТАКТЫ</div>',
                     'url' => ['/site/admin'],
                     'options' => ['style' => [
-                    'background-color' => '#996655',
+                    'background-color' => '#0E5D72',
                     'font-size' => '19px',
                 ]]],
                 ['label' => '|', 'options' => ['style' => [
@@ -52,8 +52,8 @@ AppAsset::register($this);
                     'margin-right' => '-10px',
                     'font-size' => '19px',
                     ]]],
-                ['label' => 'БЛОГ',
-                    // 'url' => ['/site/index'],
+                ['label' => '<div class="menu-labels">БЛОГ</div>',
+                    'url' => ['/site/adminblog'],
                     'options' => [
                     // 'class' => 'menu-order',
                     'style' => [
@@ -65,12 +65,12 @@ AppAsset::register($this);
                     'margin-right' => '-10px',
                     'font-size' => '19px',
                     ]]],
-                ['label' => 'УСЛУГИ',
+                ['label' => '<div class="menu-labels">УСЛУГИ</div>',
                     // 'url' => ['/site/index'],
                     'options' => [
                     // 'class' => 'menu-services',
                     'style' => [
-                    'background-color' => '#FFD400',
+                    'background-color' => '#0E5D72',
                     'font-size' => '19px',
                     ]]],
                  ['label' => '|', 'options' => ['style' => [
@@ -80,17 +80,19 @@ AppAsset::register($this);
                     ]]],
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton('ВЫЙТИ',
+                . Html::submitButton('<div class="menu-labels">ВЫЙТИ</div>',
                         ['class' => 'btn btn-link logout',
                         'style' => [
-                        'background-color' => '#AA5577',
+                        'padding-top' => '12px',
+                        'padding-bottom' => '11px',
+                        'background-color' => '#0E5D72',
                         'font-size' => '19px',
                     ]]
                     )
                 . Html::endForm()
                 . '</li>'
-
             ],
+            'encodeLabels' => false,
         ]);
         NavBar::end();
         ?>

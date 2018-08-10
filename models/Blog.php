@@ -8,9 +8,12 @@ use Yii;
  * This is the model class for table "blog".
  *
  * @property int $id
- * @property string $datetime
- * @property string $title
- * @property string $text
+ * @property string $datetimeblog
+ * @property string $titleblog
+ * @property string $textblog
+ * @property string $datetimearticle
+ * @property string $titlearticle
+ * @property string $textarticle
  */
 class Blog extends \yii\db\ActiveRecord
 {
@@ -28,9 +31,11 @@ class Blog extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['datetime', 'title', 'text'], 'required'],
-            [['title', 'text'], 'string'],
-            [['datetime'], 'string', 'max' => 50],
+            [['id', 'datetimeblog', 'titleblog', 'textblog', 'datetimearticle', 'titlearticle', 'textarticle'], 'required'],
+            [['id'], 'integer'],
+            [['titleblog', 'textblog', 'titlearticle', 'textarticle'], 'string'],
+            [['datetimeblog', 'datetimearticle'], 'string', 'max' => 50],
+            [['id'], 'unique'],
         ];
     }
 
@@ -41,9 +46,12 @@ class Blog extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'datetime' => 'Datetime',
-            'title' => 'Title',
-            'text' => 'Text',
+            'datetimeblog' => 'Дата и время блога',
+            'titleblog' => 'Заголовок блога',
+            'textblog' => 'Текст блога',
+            'datetimearticle' => 'Дата и время статьи',
+            'titlearticle' => 'Заголовок статьи',
+            'textarticle' => 'Текст статьи',
         ];
     }
 }

@@ -24,6 +24,7 @@ use app\models\Route;
 use app\models\Service;
 use app\models\Pagination1;
 use app\models\Pagination2;
+use app\models\Pagination3;
 use app\models\Pagesize;
 
 class SiteController extends Controller
@@ -85,8 +86,12 @@ class SiteController extends Controller
         $route = Route::find()->all();
         $service = Service::find()->all();
         $modelContact = new Contact();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('index', [
                 'modelBook' => $modelBook,
                 'modelBook1' => $modelBook1,
@@ -96,10 +101,14 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
         if ($modelBook1->load(Yii::$app->request->post()) && $modelBook1->save()) {
+            $message = 'Ваш заказ №' . $modelBook1->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook1->id . '. Имя: ' . $modelBook1->name . '; Телефон: ' . $modelBook1->phone]);
             return $this->render('index', [
                 'modelBook' => $modelBook,
                 'modelBook1' => $modelBook1,
@@ -109,10 +118,14 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
         if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
+            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
             return $this->render('index', [
                 'modelBook' => $modelBook,
                 'modelBook1' => $modelBook1,
@@ -122,6 +135,7 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
@@ -134,6 +148,7 @@ class SiteController extends Controller
             'route' => $route,
             'service' => $service,
             'modelContact' => $modelContact,
+            'message' => $message,
         ]);
     }
 
@@ -147,8 +162,12 @@ class SiteController extends Controller
         $route = Route::find()->all();
         $service = Service::find()->all();
         $modelContact = new Contact();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('indexmobile', [
                 'modelBook' => $modelBook,
                 'modelBook1' => $modelBook1,
@@ -158,10 +177,14 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
         if ($modelBook1->load(Yii::$app->request->post()) && $modelBook1->save()) {
+            $message = 'Ваш заказ №' . $modelBook1->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook1->id . '. Имя: ' . $modelBook1->name . '; Телефон: ' . $modelBook1->phone]);
             return $this->render('indexmobile', [
                 'modelBook' => $modelBook,
                 'modelBook1' => $modelBook1,
@@ -171,10 +194,14 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
         if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
+            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
             return $this->render('indexmobile', [
                 'modelBook' => $modelBook,
                 'modelBook1' => $modelBook1,
@@ -184,6 +211,7 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
@@ -196,6 +224,7 @@ class SiteController extends Controller
             'route' => $route,
             'service' => $service,
             'modelContact' => $modelContact,
+            'message' => $message,
         ]);
     }
 
@@ -225,8 +254,12 @@ class SiteController extends Controller
         $route = Route::find()->all();
         $service = Service::find()->all();
         $modelContact = new Contact();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('contact', [
                 'modelBook' => $modelBook,
                 'ship' => $ship,
@@ -235,10 +268,14 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
         if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
+            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
             return $this->render('contact', [
                 'modelBook' => $modelBook,
                 'ship' => $ship,
@@ -247,6 +284,7 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
@@ -264,6 +302,7 @@ class SiteController extends Controller
             'route' => $route,
             'service' => $service,
             'modelContact' => $modelContact,
+            'message' => $message,
         ]);
     }
 
@@ -276,8 +315,12 @@ class SiteController extends Controller
         $route = Route::find()->all();
         $service = Service::find()->all();
         $modelContact = new Contact();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('contactmobile', [
                 'modelBook' => $modelBook,
                 'ship' => $ship,
@@ -286,10 +329,14 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
         if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
+            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
             return $this->render('contactmobile', [
                 'modelBook' => $modelBook,
                 'ship' => $ship,
@@ -298,6 +345,7 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'modelContact' => $modelContact,
+                'message' => $message,
             ]);
         }
 
@@ -316,6 +364,7 @@ class SiteController extends Controller
             'route' => $route,
             'service' => $service,
             'modelContact' => $modelContact,
+            'message' => $message,
         ]);
     }
 
@@ -334,8 +383,12 @@ class SiteController extends Controller
         $guests = Guests::find()->all();
         $route = Route::find()->all();
         $service = Service::find()->all();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('blog', [
                 'dataProvider' => $dataProvider,
                 'modelBook' => $modelBook,
@@ -344,6 +397,7 @@ class SiteController extends Controller
                 'guests' => $guests,
                 'route' => $route,
                 'service' => $service,
+                'message' => $message,
             ]);
         }
 
@@ -355,6 +409,7 @@ class SiteController extends Controller
             'guests' => $guests,
             'route' => $route,
             'service' => $service,
+            'message' => $message,
         ]);
     }
 
@@ -368,8 +423,12 @@ class SiteController extends Controller
         $guests = Guests::find()->all();
         $route = Route::find()->all();
         $service = Service::find()->all();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('blogmobile', [
                 'dataProvider' => $dataProvider,
                 'modelBook' => $modelBook,
@@ -378,6 +437,7 @@ class SiteController extends Controller
                 'guests' => $guests,
                 'route' => $route,
                 'service' => $service,
+                'message' => $message,
             ]);
         }
 
@@ -389,10 +449,11 @@ class SiteController extends Controller
             'guests' => $guests,
             'route' => $route,
             'service' => $service,
+            'message' => $message,
         ]);
     }
 
-    public function actionArticle()
+    public function actionArticle($id)
     {
         $modelBook = new Book();
         $ship = Ship::find()->all();
@@ -400,8 +461,12 @@ class SiteController extends Controller
         $guests = Guests::find()->all();
         $route = Route::find()->all();
         $service = Service::find()->all();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('article', [
                 'modelBook' => $modelBook,
                 'ship' => $ship,
@@ -409,6 +474,8 @@ class SiteController extends Controller
                 'guests' => $guests,
                 'route' => $route,
                 'service' => $service,
+                'message' => $message,
+                'modelArticle' => Blog::findOne(['id' => $id]),
             ]);
         }
 
@@ -419,10 +486,12 @@ class SiteController extends Controller
             'guests' => $guests,
             'route' => $route,
             'service' => $service,
+            'message' => $message,
+            'modelArticle' => Blog::findOne(['id' => $id]),
         ]);
     }
 
-    public function actionArticlemobile()
+    public function actionArticlemobile($id)
     {
         $modelBook = new Book();
         $ship = Ship::find()->all();
@@ -430,8 +499,12 @@ class SiteController extends Controller
         $guests = Guests::find()->all();
         $route = Route::find()->all();
         $service = Service::find()->all();
+        $message = '';
 
         if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
             return $this->render('articlemobile', [
                 'modelBook' => $modelBook,
                 'ship' => $ship,
@@ -439,6 +512,8 @@ class SiteController extends Controller
                 'guests' => $guests,
                 'route' => $route,
                 'service' => $service,
+                'message' => $message,
+                'modelArticle' => Blog::findOne(['id' => $id]),
             ]);
         }
 
@@ -449,6 +524,8 @@ class SiteController extends Controller
             'guests' => $guests,
             'route' => $route,
             'service' => $service,
+            'message' => $message,
+            'modelArticle' => Blog::findOne(['id' => $id]),
         ]);
     }
 
@@ -527,6 +604,36 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }
 
+    public function actionAdminblog()
+    {
+        if (!Yii::$app->user->isGuest) {
+            $searchModelBlog = new BlogSearch();
+            $dataProviderBlog = $searchModelBlog->search(Yii::$app->request->queryParams);
+            $pagesize = Pagesize::find()->all();
+            $blogpagination = Pagination3::findOne(['id' => 3]);
+            $dataProviderBlog->pagination->pageSize = $blogpagination->pagesize;
+
+            if ($blogpagination->load(Yii::$app->request->post()) && $blogpagination->save()) {
+                $dataProviderBlog->pagination->pageSize = $blogpagination->pagesize;
+                return $this->render('adminblog', [
+                    'dataProviderBlog' => $dataProviderBlog,
+                    'searchModelBlog' => $searchModelBlog,
+                    'pagesize' => $pagesize,
+                    'blogpagination' => $blogpagination,
+                ]);
+            }
+
+            return $this->render('adminblog', [
+                'dataProviderBlog' => $dataProviderBlog,
+                'searchModelBlog' => $searchModelBlog,
+                'pagesize' => $pagesize,
+                'blogpagination' => $blogpagination,
+            ]);
+        }
+
+        return $this->redirect(['login']);
+    }
+
     public function actionCreatebook()
     {
         if (!Yii::$app->user->isGuest) {
@@ -546,6 +653,23 @@ class SiteController extends Controller
                 'event' => $event,
                 'guests' => $guests,
                 'route' => $route,
+            ]);
+        }
+
+        return $this->redirect(['login']);
+    }
+
+    public function actionCreateblog()
+    {
+        if (!Yii::$app->user->isGuest) {
+            $model = new Blog();
+
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['viewblog', 'id' => $model->id]);
+            }
+
+            return $this->render('createblog', [
+                'model' => $model,
             ]);
         }
 
@@ -574,6 +698,17 @@ class SiteController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->render('viewbook', [
                 'model' => Book::findOne(['id' => $id]),
+            ]);
+        }
+
+        return $this->redirect(['login']);
+    }
+
+    public function actionViewblog($id)
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->render('viewblog', [
+                'model' => Blog::findOne(['id' => $id]),
             ]);
         }
 
@@ -613,6 +748,21 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }
 
+    public function actionUpdateblog($id)
+    {
+        if (!Yii::$app->user->isGuest) {
+            $model = Blog::findOne(['id' => $id]);
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['viewblog', 'id' => $model->id]);
+            }
+
+            return $this->render('updateblog', [
+                'model' => $model,
+            ]);
+        }
+        return $this->redirect(['login']);
+    }
+
     public function actionUpdatecontact($id)
     {
         if (!Yii::$app->user->isGuest) {
@@ -634,6 +784,16 @@ class SiteController extends Controller
             Book::findOne(['id' => $id])->delete();
 
             return $this->redirect(['admin']);
+        }
+        return $this->redirect(['login']);
+    }
+
+    public function actionDeleteblog($id)
+    {
+        if (!Yii::$app->user->isGuest) {
+            Blog::findOne(['id' => $id])->delete();
+
+            return $this->redirect(['adminblog']);
         }
         return $this->redirect(['login']);
     }

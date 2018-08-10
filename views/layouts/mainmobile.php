@@ -49,7 +49,7 @@ AppAsset::register($this);
                     ['label' => '<div class="desktop-icon"></div>',
                         'url' => ['/site/index'],
                         'options' => ['style' => [
-                        'background-color' => 'green',
+                        'background-color' => '#0E5D72',
                         'font-size' => '19px',
                         'margin-top' => '-5px',
                     ]]],
@@ -58,33 +58,11 @@ AppAsset::register($this);
                         'margin-right' => '-10px',
                         'font-size' => '19px',
                         ]]],
-                    ['label' => 'ЗАКАЗАТЬ',
+                    ['label' => '<div class="menu-labels">ЗАКАЗАТЬ</div>',
                         // 'url' => ['/site/index'],
                         'options' => [
                         'class' => 'menu-order',
                         'style' => [
-                        'background-color' => '#996655',
-                        'font-size' => '19px',
-                        ]]],
-                    ['label' => '|', 'options' => ['style' => [
-                        'margin-left' => '-10px',
-                        'margin-right' => '-10px',
-                        'font-size' => '19px',
-                        ]]],
-                    ['label' => 'УСЛУГИ',
-                        // 'url' => ['/site/index'],
-                        'options' => [
-                        'class' => 'menu-services',
-                        'style' => [
-                        'background-color' => '#FFD400',
-                        'font-size' => '19px',
-                        ]]],
-                    ['label' => '|', 'options' => ['style' => [
-                        'margin-left' => '-10px',
-                        'margin-right' => '-10px',
-                        'font-size' => '19px',
-                        ]]],
-                    ['label' => 'БЛОГ', 'url' => ['/site/blogmobile'], 'options' => ['style' => [
                         'background-color' => '#0E5D72',
                         'font-size' => '19px',
                         ]]],
@@ -93,8 +71,30 @@ AppAsset::register($this);
                         'margin-right' => '-10px',
                         'font-size' => '19px',
                         ]]],
-                    ['label' => 'КОНТАКТЫ', 'url' => ['/site/contactmobile'], 'options' => ['style' => [
-                        'background-color' => '#704B6F',
+                    ['label' => '<div class="menu-labels">УСЛУГИ</div>',
+                        // 'url' => ['/site/index'],
+                        'options' => [
+                        'class' => 'menu-services',
+                        'style' => [
+                        'background-color' => '#0E5D72',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '|', 'options' => ['style' => [
+                        'margin-left' => '-10px',
+                        'margin-right' => '-10px',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '<div class="menu-labels">БЛОГ</div>', 'url' => ['/site/blogmobile'], 'options' => ['style' => [
+                        'background-color' => '#0E5D72',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '|', 'options' => ['style' => [
+                        'margin-left' => '-10px',
+                        'margin-right' => '-10px',
+                        'font-size' => '19px',
+                        ]]],
+                    ['label' => '<div class="menu-labels">КОНТАКТЫ</div>', 'url' => ['/site/contactmobile'], 'options' => ['style' => [
+                        'background-color' => '#0E5D72',
                         'font-size' => '19px',
                         ]]],
             ],

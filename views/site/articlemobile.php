@@ -9,13 +9,15 @@ use kartik\datetime\DateTimePicker;
 use yii\bootstrap\Dropdown;
 
 $this->context->layout = 'articlemobile';
-$this->title = 'Статья';
+$this->title = 'Статья '. $modelArticle->id;
 $this->params['breadcrumbs'][] = ['label' => 'Главная (моб)', 'url' => ['indexmobile']];
 $this->params['breadcrumbs'][] = ['label' => 'Блог (моб)', 'url' => ['blogmobile']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-article-mobile">
-
+    <div class="message-blog">
+        <?= $message ?>
+    </div>
     <div class="services-mobile-blog">
         <div class="services-close-icon"></div>
         <?php
@@ -104,32 +106,14 @@ $this->params['breadcrumbs'][] = $this->title;
        </div>
     </div>
 
-    <div class="article-datetime-mobile">17:00 21.07.2018</div>
+    <div class="article-datetime-mobile">
+        <?= $modelArticle->datetimearticle ?>
+    </div>
     <div class="article-caption-mobile">
-        СЛЕДУЕТ, ОДНАКО ЗАБЫВАТЬ, ЧТО НОВАЯ МОДЕЛЬ
-        ОРГАНИЗАЦИОННОЙ ДЕЯТЕЛЬНОСТИ ПОЗВОЛЯЕТ ВЫПОЛНЯТЬ
+        <?= $modelArticle->titlearticle ?>
     </div>
     <div class="article-photo-mobile"></div>
     <div class="article-text-mobile">
-        Разнообразный и богатый опыт новая модель организационной деятельности позволяет выполнять важные задания по разработке модели
-        развития. Не следует, однако забывать, что консультация с широким активом представляет собой интересный эксперимент проверки позиций,
-        занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров.
-        <br><br>
-        Значимость этих проблем настолько очевидна, что рамки и место обучения кадров способствует подготовки и реализации позиций, занимаемых
-        участниками в отношении поставленных задач.
-        <br><br>
-        ИДЕЙНЫЕ СООБРАЖЕНИЯ ВЫСШЕГО ПОРЯДКА, А ТАКЖЕ УКРЕПЛЕНИЕ И РАЗВИТИЕ
-        <br><br>
-        Прежде чем начать, хочу чтобы вы знали. Человек, которого незаконно обвиняют в этом бесчеловечном преступлении - мой сводный брат.
-        <br><br>
-        <div class="quote"></div>
-        <div class="quote-border-mobile"></div>
-        <div class="quote-text">
-            Равным образом постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнять важные
-            задания по разработке модели развития. Повседневная практика показывает, что постоянное информационно-пропагандистское
-            обеспечение нашей деятельности требуют определения и уточнения форм развития.
-        </div>
-        <br>
-        Не следует, однако забывать, что реализация намеченных плановых заданий требуют определения и уточнения форм развития.
+        <?= $modelArticle->textarticle ?>
     </div>
 </div>

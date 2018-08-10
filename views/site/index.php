@@ -9,7 +9,9 @@ use yii\bootstrap\Dropdown;
 $this->title = 'ПАНСЬКА ВТІХА';
 ?>
 <div class="site-index">
-
+     <div class="message-index">
+         <?= $message ?>
+     </div>
      <div class="services">
          <div class="services-close-icon"></div>
          <?php

@@ -14,7 +14,9 @@ $this->title = 'Блог';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-blog">
-
+    <div class="message-blog">
+        <?= $message ?>
+    </div>
     <div class="services">
         <div class="services-close-icon"></div>
         <?php
