@@ -136,6 +136,10 @@ body {
     padding: 0px 50px;
 }
 
+.service-create {
+    padding: 0px 50px;
+}
+
 .view-book {
     padding: 0px 50px;
 }
@@ -148,6 +152,10 @@ body {
     padding: 0px 50px;
 }
 
+.view-service {
+    padding: 0px 50px;
+}
+
 .update-book {
     padding: 0px 50px;
 }
@@ -157,6 +165,10 @@ body {
 }
 
 .update-contact {
+    padding: 0px 50px;
+}
+
+.update-service {
     padding: 0px 50px;
 }
 
@@ -182,6 +194,10 @@ body {
 }
 
 .blogpagination {
+    font-size: 16px;
+}
+
+.servicespagination {
     font-size: 16px;
 }
 
@@ -4647,6 +4663,13 @@ body {
 }
 
 .site-admin-blog {
+    z-index: 5;
+    height: 2000px;
+    width: 100%;
+    position: absolute;
+}
+
+.site-admin-services {
     z-index: 5;
     height: 2000px;
     width: 100%;

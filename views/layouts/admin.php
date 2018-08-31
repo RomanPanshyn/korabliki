@@ -66,7 +66,7 @@ AppAsset::register($this);
                     'font-size' => '19px',
                     ]]],
                 ['label' => '<div class="menu-labels">УСЛУГИ</div>',
-                    // 'url' => ['/site/index'],
+                    'url' => ['/site/adminservices'],
                     'options' => [
                     // 'class' => 'menu-services',
                     'style' => [

@@ -10,7 +10,11 @@ $(document).ready(function(){
 
     $(".blogpagination").change(function(){
         $(".blogpagesizerefresh").click();
-    });    
+    });
+
+    $(".servicespagination").change(function(){
+        $(".servicespagesizerefresh").click();
+    });
 
     $(".menu-services").click(function(){
         if ($(".services").css("display") == "none")

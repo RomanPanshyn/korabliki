@@ -4,62 +4,60 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
-use kartik\datetime\DateTimePicker;
 use yii\bootstrap\Dropdown;
 use yii\grid\GridView;
-use app\models\Blog;
+use app\models\Service;
 
 
 $this->context->layout = 'admin';
-$this->title = 'ПАНСЬКА ВТІХА admin blog';
+$this->title = 'ПАНСЬКА ВТІХА admin услуги';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-admin-blog">
+<div class="site-admin-services">
 
-    <div class="form-header">Блог
-        <?= Html::a('Создать статью', ['createblog'], ['class' => 'btn btn-success', 'style' => ['font-size' => '20px']]) ?>
+    <div class="form-header">Услуги
+        <?= Html::a('Создать услугу', ['createservice'], ['class' => 'btn btn-success', 'style' => ['font-size' => '20px']]) ?>
         <div class="pagination-form">
             <?php $form = ActiveForm::begin(); ?>
-            <?= $form->field($blogpagination, 'pagesize')->dropdownList(ArrayHelper::map($pagesize, 'name', 'name'), ['class' => 'blogpagination']) ?>
+            <?= $form->field($servicespagination, 'pagesize')->dropdownList(ArrayHelper::map($pagesize, 'name', 'name'), ['class' => 'servicespagination']) ?>
             <div class="form-group">
                 <?= Html::submitButton('Обновить',
-                ['class' => 'btn btn-success blogpagesizerefresh', 'style' => ['display' => 'none']]) ?>
+                ['class' => 'btn btn-success servicespagesizerefresh', 'style' => ['display' => 'none']]) ?>
             </div>
             <?php ActiveForm::end(); ?>
         </div>
     </div>
     <?= GridView::widget([
-        'dataProvider' => $dataProviderBlog,
-        'filterModel' => $searchModelBlog,
+        'dataProvider' => $dataProviderServices,
+        'filterModel' => $searchModelServices,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'id',
-            'datetimeblog',
             [
-                'attribute' => 'titleblog',
+                'attribute' => 'name',
                 'format' => 'raw',
-                'value' => function (Blog $data) {
-                    return Html::a(Html::encode($data->titleblog), Url::to(['viewblog', 'id'=> $data->id]));
+                'value' => function (Service $data) {
+                    return Html::a(Html::encode($data->name), Url::to(['viewservice', 'id'=> $data->id]));
                 },
             ],
-            'textblog:ntext',
+            'description:ntext',
             ['class' => 'yii\grid\ActionColumn',
-            'template' => '{viewblog} {updateblog} {deleteblog}',
+            'template' => '{viewservice} {updateservice} {deleteservice}',
             'buttons' => [
-                'viewblog' => function ($url,$model) {
+                'viewservice' => function ($url,$model) {
                         return Html::a('<span class="glyphicon glyphicon-eye-open"></span>', $url, [
                                         'title' => Yii::t('yii', 'Просмотр'),
                                 ]);
                 },
-                'updateblog' => function ($url,$model) {
+                'updateservice' => function ($url,$model) {
                         return Html::a('<span class="glyphicon glyphicon-pencil"></span>', $url, [
                                         'title' => Yii::t('yii', 'Редактировать'),
                                 ]);
                 },
-                'deleteblog' => function ($url,$model) {
+                'deleteservice' => function ($url,$model) {
                         return Html::a('<span class="glyphicon glyphicon-trash"></span>', $url, [
                                         'title' => Yii::t('yii', 'Удалить'),
-                                        'data-confirm' => Yii::t('yii', 'Вы уверены, что хотите удалить эту статью?'),
+                                        'data-confirm' => Yii::t('yii', 'Вы уверены, что хотите удалить эту услугу?'),
                                         'data-method' => 'post',
                                 ]);
                 },

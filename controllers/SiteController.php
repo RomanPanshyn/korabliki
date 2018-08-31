@@ -22,9 +22,11 @@ use app\models\Event;
 use app\models\Guests;
 use app\models\Route;
 use app\models\Service;
+use app\models\ServiceSearch;
 use app\models\Pagination1;
 use app\models\Pagination2;
 use app\models\Pagination3;
+use app\models\Pagination4;
 use app\models\Pagesize;
 
 class SiteController extends Controller
@@ -634,6 +636,35 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }
 
+    public function actionAdminservices()
+    {
+        if (!Yii::$app->user->isGuest) {
+            $searchModelServices = new ServiceSearch();
+            $dataProviderServices = $searchModelServices->search(Yii::$app->request->queryParams);
+            $pagesize = Pagesize::find()->all();
+            $servicespagination = Pagination4::findOne(['id' => 4]);
+            $dataProviderServices->pagination->pageSize = $servicespagination->pagesize;
+
+            if ($servicespagination->load(Yii::$app->request->post()) && $servicespagination->save()) {
+                $dataProviderServices->pagination->pageSize = $servicespagination->pagesize;
+                return $this->render('adminservices', [
+                    'dataProviderServices' => $dataProviderServices,
+                    'searchModelServices' => $searchModelServices,
+                    'pagesize' => $pagesize,
+                    'servicespagination' => $servicespagination,
+                ]);
+            }
+
+            return $this->render('adminservices', [
+                'dataProviderServices' => $dataProviderServices,
+                'searchModelServices' => $searchModelServices,
+                'pagesize' => $pagesize,
+                'servicespagination' => $servicespagination,
+            ]);
+        }
+        return $this->redirect(['login']);
+    }
+
     public function actionCreatebook()
     {
         if (!Yii::$app->user->isGuest) {
@@ -693,6 +724,23 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }
 
+    public function actionCreateservice()
+    {
+        if (!Yii::$app->user->isGuest) {
+            $model = new Service();
+
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['viewservice', 'id' => $model->id]);
+            }
+
+            return $this->render('createservice', [
+                'model' => $model,
+            ]);
+        }
+
+        return $this->redirect(['login']);
+    }
+
     public function actionViewbook($id)
     {
         if (!Yii::$app->user->isGuest) {
@@ -720,6 +768,16 @@ class SiteController extends Controller
         if (!Yii::$app->user->isGuest) {
             return $this->render('viewcontact', [
                 'model' => Contact::findOne(['id' => $id]),
+            ]);
+        }
+        return $this->redirect(['login']);
+    }
+
+    public function actionViewservice($id)
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->render('viewservice', [
+                'model' => Service::findOne(['id' => $id]),
             ]);
         }
         return $this->redirect(['login']);
@@ -778,6 +836,21 @@ class SiteController extends Controller
         return $this->redirect(['login']);
     }
 
+    public function actionUpdateservice($id)
+    {
+        if (!Yii::$app->user->isGuest) {
+            $model = Service::findOne(['id' => $id]);
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['viewservice', 'id' => $model->id]);
+            }
+
+            return $this->render('updateservice', [
+                'model' => $model,
+            ]);
+        }
+        return $this->redirect(['login']);
+    }
+
     public function actionDeletebook($id)
     {
         if (!Yii::$app->user->isGuest) {
@@ -804,6 +877,16 @@ class SiteController extends Controller
             Contact::findOne(['id' => $id])->delete();
 
             return $this->redirect(['admin']);
+        }
+        return $this->redirect(['login']);
+    }
+
+    public function actionDeleteservice($id)
+    {
+        if (!Yii::$app->user->isGuest) {
+            Service::findOne(['id' => $id])->delete();
+
+            return $this->redirect(['adminservices']);
         }
         return $this->redirect(['login']);
     }

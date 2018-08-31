@@ -5,20 +5,20 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "service".
+ * This is the model class for table "pagination".
  *
  * @property int $id
  * @property string $name
- * @property string $description
+ * @property int $pagesize
  */
-class Service extends \yii\db\ActiveRecord
+class Pagination4 extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'service';
+        return 'pagination';
     }
 
     /**
@@ -27,10 +27,9 @@ class Service extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'name', 'description'], 'required'],
-            [['id'], 'integer'],
+            [['id', 'name', 'pagesize'], 'required'],
+            [['id', 'pagesize'], 'integer'],
             [['name'], 'string', 'max' => 100],
-            [['description'], 'string'],
             [['id'], 'unique'],
         ];
     }
@@ -42,8 +41,8 @@ class Service extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Название',
-            'description' => 'Описание',
+            'name' => 'Name',
+            'pagesize' => 'Количество строк',
         ];
     }
 }
