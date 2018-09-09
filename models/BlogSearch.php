@@ -20,7 +20,8 @@ class BlogSearch extends Blog
     {
         return [
             [['id'], 'integer'],
-            [['datetimeblog', 'titleblog', 'textblog', 'datetimearticle', 'titlearticle', 'textarticle'], 'safe'],
+            [['datetimeblog', 'titleblog', 'textblog', 'datetimearticle', 'titlearticle', 'textarticle',
+                'title', 'url', 'description', 'keywords'], 'safe'],
         ];
     }
 
@@ -71,7 +72,11 @@ class BlogSearch extends Blog
             ->andFilterWhere(['like', 'textblog', $this->textblog])
             ->andFilterWhere(['like', 'datetimearticle', $this->datetimearticle])
             ->andFilterWhere(['like', 'titlearticle', $this->titlearticle])
-            ->andFilterWhere(['like', 'textarticle', $this->textarticle]);
+            ->andFilterWhere(['like', 'textarticle', $this->textarticle])
+            ->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'url', $this->url])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'keywords', $this->keywords]);
 
         return $dataProvider;
     }

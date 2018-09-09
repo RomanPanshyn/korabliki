@@ -455,7 +455,7 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionArticle($id)
+    public function actionArticle($url)
     {
         $modelBook = new Book();
         $ship = Ship::find()->all();
@@ -477,7 +477,7 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'message' => $message,
-                'modelArticle' => Blog::findOne(['id' => $id]),
+                'modelArticle' => Blog::findOne(['url' => $url]),
             ]);
         }
 
@@ -489,11 +489,11 @@ class SiteController extends Controller
             'route' => $route,
             'service' => $service,
             'message' => $message,
-            'modelArticle' => Blog::findOne(['id' => $id]),
+            'modelArticle' => Blog::findOne(['url' => $url]),
         ]);
     }
 
-    public function actionArticlemobile($id)
+    public function actionArticlemobile($url)
     {
         $modelBook = new Book();
         $ship = Ship::find()->all();
@@ -515,7 +515,7 @@ class SiteController extends Controller
                 'route' => $route,
                 'service' => $service,
                 'message' => $message,
-                'modelArticle' => Blog::findOne(['id' => $id]),
+                'modelArticle' => Blog::findOne(['url' => $url]),
             ]);
         }
 
@@ -527,7 +527,7 @@ class SiteController extends Controller
             'route' => $route,
             'service' => $service,
             'message' => $message,
-            'modelArticle' => Blog::findOne(['id' => $id]),
+            'modelArticle' => Blog::findOne(['url' => $url]),
         ]);
     }
 
@@ -663,6 +663,82 @@ class SiteController extends Controller
             ]);
         }
         return $this->redirect(['login']);
+    }
+
+    public function actionService($url)
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $service = Service::find()->all();
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+            return $this->render('service', [
+                'modelService' => Service::findOne(['url' => $url]),
+                'modelBook' => $modelBook,
+                'ship' => $ship,
+                'event' => $event,
+                'guests' => $guests,
+                'route' => $route,
+                'service' => $service,
+                'message' => $message,
+            ]);
+        }
+
+        return $this->render('service', [
+            'modelService' => Service::findOne(['url' => $url]),
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'service' => $service,
+            'message' => $message,
+        ]);
+    }
+
+    public function actionServicemobile($url)
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $service = Service::find()->all();
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
+            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+            return $this->render('servicemobile', [
+                'modelService' => Service::findOne(['url' => $url]),
+                'modelBook' => $modelBook,
+                'ship' => $ship,
+                'event' => $event,
+                'guests' => $guests,
+                'route' => $route,
+                'service' => $service,
+                'message' => $message,
+            ]);
+        }
+
+        return $this->render('servicemobile', [
+            'modelService' => Service::findOne(['url' => $url]),
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'service' => $service,
+            'message' => $message,
+        ]);
     }
 
     public function actionCreatebook()

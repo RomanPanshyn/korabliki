@@ -18,6 +18,10 @@ use dosamigos\tinymce\TinyMce;
 
     <?= $form->field($model, 'name')->textInput() ?>
 
+    <?= $form->field($model, 'title')->textInput() ?>
+
+    <?= $form->field($model, 'url')->textInput() ?>
+
     <?= $form->field($model, 'description')->widget(TinyMce::className(), [
         'options' => ['rows' => 20],
         'language' => 'ru',
@@ -30,6 +34,8 @@ use dosamigos\tinymce\TinyMce;
             'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
         ]
     ]);?>
+
+    <?= $form->field($model, 'keywords')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>

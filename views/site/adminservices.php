@@ -40,7 +40,10 @@ $this->params['breadcrumbs'][] = $this->title;
                     return Html::a(Html::encode($data->name), Url::to(['viewservice', 'id'=> $data->id]));
                 },
             ],
+            'title',
+            'url',
             'description:ntext',
+            'keywords',
             ['class' => 'yii\grid\ActionColumn',
             'template' => '{viewservice} {updateservice} {deleteservice}',
             'buttons' => [

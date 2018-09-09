@@ -20,7 +20,7 @@ class ServiceSearch extends Service
     {
         return [
             [['id'], 'integer'],
-            [['name', 'description'], 'safe'],
+            [['name', 'title', 'url', 'description', 'keywords'], 'safe'],
         ];
     }
 
@@ -67,7 +67,10 @@ class ServiceSearch extends Service
         ]);
 
         $query->andFilterWhere(['like', 'name', $this->name])
-            ->andFilterWhere(['like', 'description', $this->description]);
+            ->andFilterWhere(['like', 'title', $this->title])
+            ->andFilterWhere(['like', 'url', $this->url])
+            ->andFilterWhere(['like', 'description', $this->description])
+            ->andFilterWhere(['like', 'keywords', $this->keywords]);
 
         return $dataProvider;
     }

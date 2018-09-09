@@ -1,6 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use kartik\datetime\DateTimePicker;
@@ -16,9 +17,8 @@ $this->title = 'ПАНСЬКА ВТІХА';
     <div class="services-mobile">
         <div class="services-close-icon"></div>
         <?php
-        $serviceList =ArrayHelper::map($service, 'id', 'name');
-        for ($i = 1; $i <= count($serviceList); $i++) {
-            echo '<a href="#">'.$serviceList[$i].'</a>';
+        for ($i = 0; $i < count($service); $i++) {
+            echo Html::a($service[$i]->name, Url::to(['servicemobile', 'url' => $service[$i]->url]));
         }
          ?>
     </div>

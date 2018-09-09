@@ -37,6 +37,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'datetimearticle',
             'titlearticle:ntext',
             'textarticle:ntext',
+            'title',
+            'url',
+            'description:ntext',
+            'keywords',
         ],
     ]) ?>
 

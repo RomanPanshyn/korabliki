@@ -1,4 +1,4 @@
-html,
+layout-bloghtml,
 body {
     height: 100%;
 }
@@ -30,8 +30,16 @@ body {
     height: 1130px;
 }
 
+.layout-service {
+    height: 900px;
+}
+
 .layout-blog-mobile {
     height: 1130px;
+}
+
+.layout-service-mobile {
+    height: 900px;
 }
 
 .layout-article {
@@ -107,6 +115,15 @@ body {
 }
 
 .message-blog {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-weight: 900;
+    position: absolute;
+    margin-top: -20px;
+}
+
+.message-service {
     text-align: center;
     font-size: 25px;
     color: black;
@@ -4697,6 +4714,26 @@ body {
     background-color: #ffffff;
     z-index: 20;
     height: 1500px;
+    width: 700px;
+    position: absolute;
+    color: black;
+    padding-left: 0px;
+}
+
+.site-service {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 1200px;
+    width: 980px;
+    position: absolute;
+    color: black;
+    padding-left: 0px;
+}
+
+.site-service-mobile {
+    background-color: #ffffff;
+    z-index: 20;
+    height: 1200px;
     width: 700px;
     position: absolute;
     color: black;

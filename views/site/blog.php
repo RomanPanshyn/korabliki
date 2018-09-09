@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\ListView;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
@@ -20,9 +21,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="services">
         <div class="services-close-icon"></div>
         <?php
-        $serviceList =ArrayHelper::map($service, 'id', 'name');
-        for ($i = 1; $i <= count($serviceList); $i++) {
-            echo '<a href="#">'.$serviceList[$i].'</a>';
+        for ($i = 0; $i < count($service); $i++) {
+            echo Html::a($service[$i]->name, Url::to(['service', 'url' => $service[$i]->url]));
         }
          ?>
     </div>
