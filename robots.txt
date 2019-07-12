@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Disallow: /blog/
+Sitemap: https://korabliki.com.ua/sitemap.xml

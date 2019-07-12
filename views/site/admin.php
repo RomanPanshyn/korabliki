@@ -8,7 +8,7 @@ use yii\bootstrap\Dropdown;
 use yii\grid\GridView;
 
 $this->context->layout = 'admin';
-$this->title = 'ПАНСЬКА ВТІХА admin';
+$this->title = 'CUBA LIBRE admin';
 ?>
 <div class="site-admin">
 
@@ -36,8 +36,8 @@ $this->title = 'ПАНСЬКА ВТІХА admin';
             'guests',
             'name',
             'phone',
-            'datefrom',
-            'dateto',
+            'bookdate',
+            'booktime',
             ['class' => 'yii\grid\ActionColumn',
             'template' => '{viewbook} {updatebook} {deletebook}',
             'buttons' => [

@@ -14,8 +14,8 @@ use Yii;
  * @property int $guests
  * @property string $name
  * @property string $phone
- * @property string $datefrom
- * @property string $dateto
+ * @property string $bookdate
+ * @property string $booktime
  */
 class Book1 extends \yii\db\ActiveRecord
 {
@@ -33,9 +33,9 @@ class Book1 extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['ship', 'route', 'event', 'guests', 'name', 'phone', 'datefrom', 'dateto'], 'required'],
+            [['ship', 'route', 'event', 'guests', 'name', 'phone', 'bookdate', 'booktime'], 'required'],
             [['guests'], 'integer'],
-            [['ship', 'route', 'event', 'name', 'phone', 'datefrom', 'dateto'], 'string', 'max' => 100],
+            [['ship', 'route', 'event', 'name', 'phone', 'bookdate', 'booktime'], 'string', 'max' => 100],
         ];
     }
 
@@ -52,8 +52,8 @@ class Book1 extends \yii\db\ActiveRecord
             'guests' => 'Количество гостей',
             'name' => 'Имя',
             'phone' => 'Телефон',
-            'datefrom' => 'Дата и время с',
-            'dateto' => 'Дата и время до',
+            'bookdate' => 'Дата',
+            'booktime' => 'Время',
         ];
     }
 }

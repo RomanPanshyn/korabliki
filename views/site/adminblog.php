@@ -11,7 +11,7 @@ use app\models\Blog;
 
 
 $this->context->layout = 'admin';
-$this->title = 'ПАНСЬКА ВТІХА admin blog';
+$this->title = 'CUBA LIBRE admin blog';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-admin-blog">

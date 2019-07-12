@@ -20,7 +20,7 @@ class BookSearch extends Book
     {
         return [
             [['id'], 'integer'],
-            [['ship', 'route', 'event', 'guests', 'name', 'phone', 'datefrom', 'dateto'], 'safe'],
+            [['ship', 'route', 'event', 'guests', 'name', 'phone', 'bookdate', 'booktime'], 'safe'],
         ];
     }
 
@@ -71,8 +71,8 @@ class BookSearch extends Book
             ->andFilterWhere(['like', 'guests', $this->guests])
             ->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'phone', $this->phone])
-            ->andFilterWhere(['like', 'datefrom', $this->datefrom])
-            ->andFilterWhere(['like', 'dateto', $this->dateto]);
+            ->andFilterWhere(['like', 'bookdate', $this->bookdate])
+            ->andFilterWhere(['like', 'booktime', $this->booktime]);
 
         return $dataProvider;
     }

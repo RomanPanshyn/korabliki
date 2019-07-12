@@ -20,7 +20,7 @@ use dosamigos\tinymce\TinyMce;
 
     <?= $form->field($model, 'title')->textInput() ?>
 
-    <?= $form->field($model, 'url')->textInput() ?>
+    <?= $form->field($model, 'url')->textInput(['readonly'=>true]) ?>
 
     <?= $form->field($model, 'description')->widget(TinyMce::className(), [
         'options' => ['rows' => 20],

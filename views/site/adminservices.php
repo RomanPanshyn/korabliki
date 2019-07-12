@@ -10,7 +10,7 @@ use app\models\Service;
 
 
 $this->context->layout = 'admin';
-$this->title = 'ПАНСЬКА ВТІХА admin услуги';
+$this->title = 'CUBA LIBRE admin услуги';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-admin-services">

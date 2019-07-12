@@ -5,7 +5,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'korabliki',
-    'name' => 'ПАНСЬКА ВТІХА',
+    'name' => 'CUBA LIBRE',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',

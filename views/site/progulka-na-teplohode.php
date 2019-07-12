@@ -4,25 +4,25 @@
 
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\bootstrap\ActiveForm;
+use yii\widgets\ListView;
+use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use kartik\datetime\DateTimePicker;
 use yii\bootstrap\Dropdown;
 
-$this->title = $modelArticle->title;
+$this->title = $modelService->title;
 $this->registerMetaTag([
     'name' => 'description',
-    'content' => $modelArticle->description,
+    'content' => $modelService->description,
 ]);
 $this->registerMetaTag([
     'name' => 'keywords',
-    'content' => $modelArticle->keywords,
+    'content' => $modelService->keywords,
 ]);
-$this->params['breadcrumbs'][] = ['label' => 'Блог', 'url' => ['blog']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-article">
-    <div class="message-blog">
+<div class="site-service">
+    <div class="message-service">
         <?= $message ?>
     </div>
 
@@ -146,18 +146,8 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php ActiveForm::end(); ?>
         </div>
     </div>
-    <div class="blog-space"></div>
-    <div class="article-content">
-        <div class="article-datetime">
-            <?= $modelArticle->datetimearticle ?>
-        </div>
-        <div class="article-caption">
-            <?= $modelArticle->titlearticle ?>
-        </div>
-        <div class="article-photo"></div>
-        <div class="article-text">
-            <?= $modelArticle->textarticle ?>
-        </div>
+    <div class="service-space"></div>
+    <div class="service-record">
+        <?= $modelService->description; ?>
     </div>
-    <div class="blog-space"></div>
 </div>

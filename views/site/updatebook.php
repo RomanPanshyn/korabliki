@@ -21,6 +21,9 @@ $this->params['breadcrumbs'][] = 'Редактировать';
         'event' => $event,
         'guests' => $guests,
         'route' => $route,
+        'bookRecord' => $bookRecord,
+        'schedule1' => $schedule1,
+        'schedule2' => $schedule2,
     ]) ?>
-
+    <div class="blog-space"></div>
 </div>

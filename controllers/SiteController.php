@@ -28,6 +28,8 @@ use app\models\Pagination2;
 use app\models\Pagination3;
 use app\models\Pagination4;
 use app\models\Pagesize;
+use app\models\Schedule;
+use app\models\Footerseo;
 
 class SiteController extends Controller
 {
@@ -82,164 +84,168 @@ class SiteController extends Controller
     {
         $modelBook = new Book();
         $modelBook1 = new Book1();
+        $modelContact = new Contact();
         $ship = Ship::find()->all();
         $event = Event::find()->all();
         $guests = Guests::find()->all();
         $route = Route::find()->all();
-        $service = Service::find()->all();
-        $modelContact = new Contact();
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+        $footerseo = Footerseo::findOne(1);
         $message = '';
 
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('index', [
-                'modelBook' => $modelBook,
-                'modelBook1' => $modelBook1,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('index', [
+                        'modelBook' => $modelBook,
+                        'modelBook1' => $modelBook1,
+                        'modelContact' => $modelContact,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'footerseo' => $footerseo,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                $bookRecord = Book::find()->all();
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('index', [
+                    'modelBook' => $modelBook,
+                    'modelBook1' => $modelBook1,
+                    'modelContact' => $modelContact,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'footerseo' => $footerseo,
+                    'message' => $message,
+                ]);
+            }
         }
 
-        if ($modelBook1->load(Yii::$app->request->post()) && $modelBook1->save()) {
-            $message = 'Ваш заказ №' . $modelBook1->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook1->id . '. Имя: ' . $modelBook1->name . '; Телефон: ' . $modelBook1->phone]);
-            return $this->render('index', [
-                'modelBook' => $modelBook,
-                'modelBook1' => $modelBook1,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
+        if ($modelBook1->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook1->bookdate == $bookRecord[$i]->bookdate && $modelBook1->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('index', [
+                        'modelBook' => $modelBook,
+                        'modelBook1' => $modelBook1,
+                        'modelContact' => $modelContact,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'footerseo' => $footerseo,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook1->save();
+                $message = 'Ваш заказ №' . $modelBook1->id . ' успешно принят!';
+                $bookRecord = Book::find()->all();
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook1->id . '. Имя: ' . $modelBook1->name . '; Телефон: ' . $modelBook1->phone]);
+                return $this->render('index', [
+                    'modelBook' => $modelBook,
+                    'modelBook1' => $modelBook1,
+                    'modelContact' => $modelContact,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'footerseo' => $footerseo,
+                    'message' => $message,
+                ]);
+            }
         }
 
-        if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
-            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
-            return $this->render('index', [
-                'modelBook' => $modelBook,
-                'modelBook1' => $modelBook1,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
+        if ($modelContact->load(Yii::$app->request->post())) {
+            $contactRecord = Contact::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($contactRecord); $i++) {
+                if ($modelContact->name == $contactRecord[$i]->name && $modelContact->phone == $contactRecord[$i]->phone) {
+                    $requestSent = true;
+                    $message = 'Ваши контактные данные уже были отправлены ранее!';
+                    return $this->render('index', [
+                        'modelBook' => $modelBook,
+                        'modelBook1' => $modelBook1,
+                        'modelContact' => $modelContact,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'footerseo' => $footerseo,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelContact->save();
+                $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
+                return $this->render('index', [
+                    'modelBook' => $modelBook,
+                    'modelBook1' => $modelBook1,
+                    'modelContact' => $modelContact,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'footerseo' => $footerseo,
+                    'message' => $message,
+                ]);
+            }
         }
 
         return $this->render('index', [
             'modelBook' => $modelBook,
             'modelBook1' => $modelBook1,
+            'modelContact' => $modelContact,
             'ship' => $ship,
             'event' => $event,
             'guests' => $guests,
             'route' => $route,
-            'service' => $service,
-            'modelContact' => $modelContact,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
+            'footerseo' => $footerseo,
             'message' => $message,
         ]);
-    }
-
-    public function actionIndexmobile()
-    {
-        $modelBook = new Book();
-        $modelBook1 = new Book1();
-        $ship = Ship::find()->all();
-        $event = Event::find()->all();
-        $guests = Guests::find()->all();
-        $route = Route::find()->all();
-        $service = Service::find()->all();
-        $modelContact = new Contact();
-        $message = '';
-
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('indexmobile', [
-                'modelBook' => $modelBook,
-                'modelBook1' => $modelBook1,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
-        }
-
-        if ($modelBook1->load(Yii::$app->request->post()) && $modelBook1->save()) {
-            $message = 'Ваш заказ №' . $modelBook1->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook1->id . '. Имя: ' . $modelBook1->name . '; Телефон: ' . $modelBook1->phone]);
-            return $this->render('indexmobile', [
-                'modelBook' => $modelBook,
-                'modelBook1' => $modelBook1,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
-        }
-
-        if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
-            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
-            return $this->render('indexmobile', [
-                'modelBook' => $modelBook,
-                'modelBook1' => $modelBook1,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
-        }
-
-        return $this->render('indexmobile', [
-            'modelBook' => $modelBook,
-            'modelBook1' => $modelBook1,
-            'ship' => $ship,
-            'event' => $event,
-            'guests' => $guests,
-            'route' => $route,
-            'service' => $service,
-            'modelContact' => $modelContact,
-            'message' => $message,
-        ]);
-    }
-
-    public function actionBook()
-    {
-        $model = new Book();
-        if ($model->load(Yii::$app->request->post()) && $model->validate()){
-
-                return $this->render('book-confirm', ['model' => $model]);
-        } else {
-
-            return $this->render('book', ['model' => $model]);
-        }
     }
 
     /**
@@ -254,47 +260,94 @@ class SiteController extends Controller
         $event = Event::find()->all();
         $guests = Guests::find()->all();
         $route = Route::find()->all();
-        $service = Service::find()->all();
         $modelContact = new Contact();
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
         $message = '';
 
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('contact', [
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('contact', [
+                        'modelBook' => $modelBook,
+                        'modelContact' => $modelContact,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                $bookRecord = Book::find()->all();
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('contact', [
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'modelContact' => $modelContact,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
         }
 
-        if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
-            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
-            return $this->render('contact', [
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
+        if ($modelContact->load(Yii::$app->request->post())) {
+            $contactRecord = Contact::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($contactRecord); $i++) {
+                if ($modelContact->name == $contactRecord[$i]->name && $modelContact->phone == $contactRecord[$i]->phone) {
+                    $requestSent = true;
+                    $message = 'Ваши контактные данные уже были отправлены ранее!';
+                    return $this->render('contact', [
+                        'modelBook' => $modelBook,
+                        'modelContact' => $modelContact,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelContact->save();
+                $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
+                return $this->render('contact', [
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'modelContact' => $modelContact,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
         }
-
-        // if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-        //     Yii::$app->session->setFlash('contactFormSubmitted');
-        //
-        //     return $this->refresh();
-        // }
 
         return $this->render('contact', [
             'modelBook' => $modelBook,
@@ -302,70 +355,10 @@ class SiteController extends Controller
             'event' => $event,
             'guests' => $guests,
             'route' => $route,
-            'service' => $service,
             'modelContact' => $modelContact,
-            'message' => $message,
-        ]);
-    }
-
-    public function actionContactmobile()
-    {
-        $modelBook = new Book();
-        $ship = Ship::find()->all();
-        $event = Event::find()->all();
-        $guests = Guests::find()->all();
-        $route = Route::find()->all();
-        $service = Service::find()->all();
-        $modelContact = new Contact();
-        $message = '';
-
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('contactmobile', [
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
-        }
-
-        if ($modelContact->load(Yii::$app->request->post()) && $modelContact->save()) {
-            $message = 'Ваши контактные данные №' . $modelContact->id . ' успешно приняты!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступили контактные данные №' . $modelContact->id . '. Имя: ' . $modelContact->name . '; Телефон: ' . $modelContact->phone]);
-            return $this->render('contactmobile', [
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'modelContact' => $modelContact,
-                'message' => $message,
-            ]);
-        }
-
-        // if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-        //     Yii::$app->session->setFlash('contactFormSubmitted');
-        //
-        //     return $this->refresh();
-        // }
-
-
-        return $this->render('contactmobile', [
-            'modelBook' => $modelBook,
-            'ship' => $ship,
-            'event' => $event,
-            'guests' => $guests,
-            'route' => $route,
-            'service' => $service,
-            'modelContact' => $modelContact,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
             'message' => $message,
         ]);
     }
@@ -384,23 +377,50 @@ class SiteController extends Controller
         $event = Event::find()->all();
         $guests = Guests::find()->all();
         $route = Route::find()->all();
-        $service = Service::find()->all();
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
         $message = '';
 
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('blog', [
-                'dataProvider' => $dataProvider,
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'message' => $message,
-            ]);
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('blog', [
+                        'dataProvider' => $dataProvider,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                    return $this->render('blog', [
+                        'dataProvider' => $dataProvider,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+            }
         }
 
         return $this->render('blog', [
@@ -410,47 +430,9 @@ class SiteController extends Controller
             'event' => $event,
             'guests' => $guests,
             'route' => $route,
-            'service' => $service,
-            'message' => $message,
-        ]);
-    }
-
-    public function actionBlogmobile()
-    {
-        $modelBook = new Book();
-        $searchModel = new BlogSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $ship = Ship::find()->all();
-        $event = Event::find()->all();
-        $guests = Guests::find()->all();
-        $route = Route::find()->all();
-        $service = Service::find()->all();
-        $message = '';
-
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('blogmobile', [
-                'dataProvider' => $dataProvider,
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'message' => $message,
-            ]);
-        }
-
-        return $this->render('blogmobile', [
-            'dataProvider' => $dataProvider,
-            'modelBook' => $modelBook,
-            'ship' => $ship,
-            'event' => $event,
-            'guests' => $guests,
-            'route' => $route,
-            'service' => $service,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
             'message' => $message,
         ]);
     }
@@ -462,23 +444,50 @@ class SiteController extends Controller
         $event = Event::find()->all();
         $guests = Guests::find()->all();
         $route = Route::find()->all();
-        $service = Service::find()->all();
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
         $message = '';
 
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('article', [
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'message' => $message,
-                'modelArticle' => Blog::findOne(['url' => $url]),
-            ]);
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('article', [
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                        'modelArticle' => Blog::findOne(['url' => $url]),
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('article', [
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                    'modelArticle' => Blog::findOne(['url' => $url]),
+                ]);
+            }
         }
 
         return $this->render('article', [
@@ -487,45 +496,9 @@ class SiteController extends Controller
             'event' => $event,
             'guests' => $guests,
             'route' => $route,
-            'service' => $service,
-            'message' => $message,
-            'modelArticle' => Blog::findOne(['url' => $url]),
-        ]);
-    }
-
-    public function actionArticlemobile($url)
-    {
-        $modelBook = new Book();
-        $ship = Ship::find()->all();
-        $event = Event::find()->all();
-        $guests = Guests::find()->all();
-        $route = Route::find()->all();
-        $service = Service::find()->all();
-        $message = '';
-
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-            'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('articlemobile', [
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'message' => $message,
-                'modelArticle' => Blog::findOne(['url' => $url]),
-            ]);
-        }
-
-        return $this->render('articlemobile', [
-            'modelBook' => $modelBook,
-            'ship' => $ship,
-            'event' => $event,
-            'guests' => $guests,
-            'route' => $route,
-            'service' => $service,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
             'message' => $message,
             'modelArticle' => Blog::findOne(['url' => $url]),
         ]);
@@ -672,23 +645,50 @@ class SiteController extends Controller
         $event = Event::find()->all();
         $guests = Guests::find()->all();
         $route = Route::find()->all();
-        $service = Service::find()->all();
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
         $message = '';
 
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-                'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('service', [
-                'modelService' => Service::findOne(['url' => $url]),
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'message' => $message,
-            ]);
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('service', [
+                        'modelService' => Service::findOne(['url' => $url]),
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('service', [
+                    'modelService' => Service::findOne(['url' => $url]),
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
         }
 
         return $this->render('service', [
@@ -698,45 +698,417 @@ class SiteController extends Controller
             'event' => $event,
             'guests' => $guests,
             'route' => $route,
-            'service' => $service,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
             'message' => $message,
         ]);
     }
 
-    public function actionServicemobile($url)
+    public function actionProgulkaNaTeplohode()
     {
         $modelBook = new Book();
         $ship = Ship::find()->all();
         $event = Event::find()->all();
         $guests = Guests::find()->all();
         $route = Route::find()->all();
-        $service = Service::find()->all();
+        $modelService = Service::findOne(['url' => 'progulka-na-teplohode']);
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
         $message = '';
 
-        if ($modelBook->load(Yii::$app->request->post()) && $modelBook->save()) {
-            $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
-            Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
-                'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
-            return $this->render('servicemobile', [
-                'modelService' => Service::findOne(['url' => $url]),
-                'modelBook' => $modelBook,
-                'ship' => $ship,
-                'event' => $event,
-                'guests' => $guests,
-                'route' => $route,
-                'service' => $service,
-                'message' => $message,
-            ]);
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('progulka-na-teplohode', [
+                        'modelService' => $modelService,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('progulka-na-teplohode', [
+                    'modelService' => $modelService,
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
         }
 
-        return $this->render('servicemobile', [
-            'modelService' => Service::findOne(['url' => $url]),
+        return $this->render('progulka-na-teplohode', [
+            'modelService' => $modelService,
             'modelBook' => $modelBook,
             'ship' => $ship,
             'event' => $event,
             'guests' => $guests,
             'route' => $route,
-            'service' => $service,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
+            'message' => $message,
+        ]);
+    }
+
+    public function actionVecherinkaNaTeplohode()
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $modelService = Service::findOne(['url' => 'vecherinka-na-teplohode']);
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('vecherinka-na-teplohode', [
+                        'modelService' => $modelService,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('vecherinka-na-teplohode', [
+                    'modelService' => $modelService,
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
+        }
+
+        return $this->render('vecherinka-na-teplohode', [
+            'modelService' => $modelService,
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
+            'message' => $message,
+        ]);
+    }
+
+    public function actionDenRozhdeniaNaTeplohode()
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $modelService = Service::findOne(['url' => 'den-rozhdenia-na-teplohode']);
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('den-rozhdenia-na-teplohode', [
+                        'modelService' => $modelService,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('den-rozhdenia-na-teplohode', [
+                    'modelService' => $modelService,
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
+        }
+
+        return $this->render('den-rozhdenia-na-teplohode', [
+            'modelService' => $modelService,
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
+            'message' => $message,
+        ]);
+    }
+
+    public function actionBanketNaTeplohode()
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $modelService = Service::findOne(['url' => 'banket-na-teplohode']);
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('banket-na-teplohode', [
+                        'modelService' => $modelService,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('banket-na-teplohode', [
+                    'modelService' => $modelService,
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
+        }
+
+        return $this->render('banket-na-teplohode', [
+            'modelService' => $modelService,
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
+            'message' => $message,
+        ]);
+    }
+
+    public function actionKorporativNaTeplohode()
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $modelService = Service::findOne(['url' => 'korporativ-na-teplohode']);
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('korporativ-na-teplohode', [
+                        'modelService' => $modelService,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('korporativ-na-teplohode', [
+                    'modelService' => $modelService,
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
+        }
+
+        return $this->render('korporativ-na-teplohode', [
+            'modelService' => $modelService,
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
+            'message' => $message,
+        ]);
+    }
+
+    public function actionSvadbaNaTeplohode()
+    {
+        $modelBook = new Book();
+        $ship = Ship::find()->all();
+        $event = Event::find()->all();
+        $guests = Guests::find()->all();
+        $route = Route::find()->all();
+        $modelService = Service::findOne(['url' => 'svadba-na-teplohode']);
+        $bookRecord = Book::find()->all();
+        $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+        $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+        $message = '';
+
+        if ($modelBook->load(Yii::$app->request->post())) {
+            $bookRecord = Book::find()->all();
+            $requestSent = false;
+            for ($i = 0; $i < count($bookRecord); $i++) {
+                if ($modelBook->bookdate == $bookRecord[$i]->bookdate && $modelBook->booktime == $bookRecord[$i]->booktime) {
+                    $requestSent = true;
+                    $message = 'Ваш запрос уже был отправлен ранее!';
+                    return $this->render('svadba-na-teplohode', [
+                        'modelService' => $modelService,
+                        'modelBook' => $modelBook,
+                        'ship' => $ship,
+                        'event' => $event,
+                        'guests' => $guests,
+                        'route' => $route,
+                        'bookRecord' => $bookRecord,
+                        'schedule1' => $schedule1,
+                        'schedule2' => $schedule2,
+                        'message' => $message,
+                    ]);
+                }
+            }
+            if (!$requestSent) {
+                $modelBook->save();
+                $message = 'Ваш заказ №' . $modelBook->id . ' успешно принят!';
+                Yii::$app->telegram->sendMessage(['chat_id' => '393320392',
+                    'text' => 'Поступил заказ №' . $modelBook->id . '. Имя: ' . $modelBook->name . '; Телефон: ' . $modelBook->phone]);
+                return $this->render('svadba-na-teplohode', [
+                    'modelService' => $modelService,
+                    'modelBook' => $modelBook,
+                    'ship' => $ship,
+                    'event' => $event,
+                    'guests' => $guests,
+                    'route' => $route,
+                    'bookRecord' => $bookRecord,
+                    'schedule1' => $schedule1,
+                    'schedule2' => $schedule2,
+                    'message' => $message,
+                ]);
+            }
+        }
+
+        return $this->render('svadba-na-teplohode', [
+            'modelService' => $modelService,
+            'modelBook' => $modelBook,
+            'ship' => $ship,
+            'event' => $event,
+            'guests' => $guests,
+            'route' => $route,
+            'bookRecord' => $bookRecord,
+            'schedule1' => $schedule1,
+            'schedule2' => $schedule2,
             'message' => $message,
         ]);
     }
@@ -867,6 +1239,10 @@ class SiteController extends Controller
             $event = Event::find()->all();
             $guests = Guests::find()->all();
             $route = Route::find()->all();
+            $bookRecord = Book::find()->all();
+            $schedule1 = Schedule::findAll([1,2,3,4,5,6,7,8]);
+            $schedule2 = Schedule::findAll([9,10,11,12,13,14,15,16]);
+
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
                 return $this->redirect(['viewbook', 'id' => $model->id]);
             }
@@ -877,6 +1253,9 @@ class SiteController extends Controller
                 'event' => $event,
                 'guests' => $guests,
                 'route' => $route,
+                'bookRecord' => $bookRecord,
+                'schedule1' => $schedule1,
+                'schedule2' => $schedule2,
             ]);
         }
         return $this->redirect(['login']);

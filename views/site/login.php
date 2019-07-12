@@ -8,7 +8,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 $this->context->layout = 'admin';
-$this->title = 'ПАНСЬКА ВТІХА Войти';
+$this->title = 'CUBA LIBRE Войти';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">

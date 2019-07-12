@@ -36,8 +36,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'guests',
             'name',
             'phone',
-            'datefrom',
-            'dateto',
+            'bookdate',
+            'booktime',
         ],
     ]) ?>
 
